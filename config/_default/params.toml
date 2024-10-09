@@ -6,7 +6,7 @@
 # https://jpanther.github.io/congo/docs/configuration/#theme-parameters
 
 colorScheme = "congo"
-defaultAppearance = "dark" # valid options: light or dark
+defaultAppearance = "light" # valid options: light or dark
 autoSwitchAppearance = false
 
 defaultThemeColor = "#FFFFFF"
@@ -28,7 +28,7 @@ fingerprintAlgorithm = "sha256"
 [footer]
   showCopyright = false
   showThemeAttribution = false
-  showAppearanceSwitcher = false
+  showAppearanceSwitcher = true
   showScrollToTop = true
 
 [homepage]
