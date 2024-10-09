@@ -19,4 +19,4 @@ I previously used Hugo for my [old personal website](https://github.com/aminoa/p
 
 ## The name?
 
-It's a reference to [Stale Reference Manipulation](https://www.zeldaspeedruns.com/oot/srm/srm-overview), a powerful glitch in The Legend of Zelda: Ocarina of Time.
+It's a reference (ha) to [Stale Reference Manipulation](https://www.zeldaspeedruns.com/oot/srm/srm-overview), a powerful glitch in The Legend of Zelda: Ocarina of Time.
