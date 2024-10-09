@@ -2,7 +2,6 @@
 title: 'Starting the Blog'
 date: 2024-09-18T13:38:13-04:00
 draft: false
-featured_image: ./images/feature.png
 description: "Welcome to the Blog!"
 summary: I hesitated starting a blog while at NYU due to wanting to avoid my opinions being too simplistic/not nuanced and having something unique to say.
 ---
@@ -20,4 +19,4 @@ I previously used Hugo for my [old personal website](https://github.com/aminoa/p
 
 ## The name?
 
-It's a reference to [Stale Reference Manipulation](https://www.zeldaspeedruns.com/oot/srm/srm-overview), a glitch in The Legend of Zelda: Ocarina of Time.
+It's a reference to [Stale Reference Manipulation](https://www.zeldaspeedruns.com/oot/srm/srm-overview), a powerful glitch in The Legend of Zelda: Ocarina of Time.
