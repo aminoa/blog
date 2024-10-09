@@ -1,0 +1,4 @@
+baseURL = 'blog.aneeshmaganti.com/'
+languageCode = 'en'
+title = 'Bittersweet Melancholy'
+theme = 'congo'
