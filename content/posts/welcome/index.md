@@ -16,7 +16,7 @@ Posts discussing emulation, progress updates on larger projects I'm working on, 
 
 ## Hugo?
 
-I previously used Hugo for my [old personal website](https://github.com/aminoa/personal-website) but scrapped it since it felt too generic. However, for this blog, I'm ok with the design being a bit less sophisticated; furthermore, I have taken steps to modify the Congo hugo theme to make it more interesting.
+I previously used Hugo for my [old personal website](https://github.com/aminoa/personal-website) but scrapped it since it felt too generic. However, for this blog, I'm ok with the design being a bit less interesting; furthermore, I have taken steps to modify the Congo hugo theme to make it more interesting.
 
 ## The name?
 
