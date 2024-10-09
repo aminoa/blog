@@ -1,0 +1,6 @@
+.max-w-7xl {
+	max-width: 100rem !important;
+}
+.max-w-prose {
+	max-width: 100ch !important;
+}
