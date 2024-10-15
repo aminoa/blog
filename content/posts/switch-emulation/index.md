@@ -17,7 +17,7 @@ On October 1st 2024, GDKChan took down the Ryujinx organization from GitHub afte
   - [1992: Sega vs. Accolade, (Lawsuit)](#1992-sega-vs-accolade-lawsuit)
   - [2000: Sony vs. Connectix, (Lawsuit)](#2000-sony-vs-connectix-lawsuit)
   - [2000: Sony vs. Bleem!, (Lawsuit)](#2000-sony-vs-bleem-lawsuit)
-- [Things Aren't So Settled: The Digital Millenium Copyright Act:](#things-arent-so-settled-the-digital-millenium-copyright-act)
+- [Things Aren't So Settled: The Digital Millenium Copyright Act](#things-arent-so-settled-the-digital-millenium-copyright-act)
 - [Nintendo's Actions against Emulators](#nintendos-actions-against-emulators)
 - [Why the Recent Action against Ryujinx is a Big Deal](#why-the-recent-action-against-ryujinx-is-a-big-deal)
 - [What can be done?](#what-can-be-done)
@@ -62,37 +62,16 @@ Some highlights from the suit:
 2) **Connectix is a valid competitor to the PlayStation**: As discussed in the potential market impact for fair use, "Sony understandably seeks control over the market for devices that play games Sony produces or licenses. The copyright law, however, does not confer such a monopoly".
 3) **Connectix copying the BIOS for the purposes of reverse engineering is legal**: as stated in factor 1 for fair use, it's necessary to get access the unprotected/functional elements of Sony's hardware.
 
-Study of Fair Use Factors:
-    - 1) Nature of the copyrighted work: Relies on Sega case precedent - getting access to functional elements of Sony BIOS requires reverse engineering. 
-    - 2) Amount and substantiality of portion used - entire BIOS used so against Connectix but, like in Sega, this factor carries little weight since the final product lacks the infringing material.
-    - 3) Purpose and character of the use - Does Connectix only supersede or add something original? It's modestly transformative, allowing Playstation games to be played in new environments. 
-    - 4) Potential market impact: potentially (Aneesh: but surprisingly) as a transformative product, it's a legitimate competitor. 
-
-
 ### 2000: [Sony vs. Bleem!](https://www.copyright.gov/fair-use/summaries/sonycomputer-bleem-9thcir2000.pdf), ([Lawsuit](https://casetext.com/case/sony-computer-entertainment-america-v-bleem))
 
-    - Founded by Randy Linden and David Herpolsheimer
-        - Linden, programmer who ported Doom to the SNES and Dragon's Lair to the C64, came up with initial concept for Bleem
-        - Herpolsheimer, worked in marketing with IBM, Kodak, Apple, early advocate for digital rights - he wanted future proofing for game software
-    - Notably used dynamic recompilation, allowed for emulation enhancements (improved resolutions, anti-aliasing)
-    - Bleem! saw it as a win for Sony too, as consoles are sold at a loss but Sony makes up the difference via games (so Bleem would get a piece of the licensing costs). 
-        - Interestingly: bleem! envisioned it could be an easy way for developers to port their PlayStation games to PC
-    - Sony disagreed and sued them over copyright infringement.  
-    
-    - District court ruled in favor of Sony and set up a preliminary injunction against Sony, but appeals court overturned this
-    - Main issue: Is using screenshots to compare Bleem with the PlayStation fair use?
-    - Bleem's use of screenshots was for comparative advertising 
-    - Now need to look at fair use again: 
-        - While both companies argue that they aren't competitors, the court directly asserts Bleem is a competitor.
-        - First factor (purpose/character of the use). It goes on to say that while PlayStation sales may diminish, the screenshots are important for acting as comparative advertising, which is a source of important information for consumers.
-        - Second factor (nature of copyrighted work): screenshot is tiny part of the game so factor not relevant.
-        - Third factor (amount and substance fo portion of the work used): insignificant portion of the game.
-        - Fourth factor (effect upon market value for the copyrighted work): doesn't effect how Sony uses its screenshots and "If sales of Sony consoles drop, it will be due to the Bleem emulator's technical superiority over the PlayStation console, not because Bleem used screen shots to illustrate that comparison"
+Simultaneously to Connectix, Randy Linden (computer programmer who ported Doom to the SNES and Dragon's Lair to the C64) and David Herpolsheimer (marketing with IBM, Kodak, Apple) began work on Connectix  - Notably used dynamic recompilation, allowed for emulation enhancements (improved resolutions, anti-aliasing). bleem! envisioned it could be an easy way for developers to port their PlayStation games to PC. 
 
-    - Again, Bleem wins this case. 
+Sony disagreed and sued them over copyright infringement over the usage of screenshots for comparative advertising; while the district court ruled in favor of Sony and set up a preliminary injunction against Sony, the appeals court overturned this. The court asserted Bleem as a competitor to Sony and ruled Bleem's use of screenshots was for comparative advertising and thus fair use - *"If sales of Sony consoles drop, it will be due to the Bleem emulator's technical superiority over the PlayStation console, not because Bleem used screen shots to illustrate that comparison"*.
 
+Again, Bleem wins this case but again, Sony continues to sue. Linden goes to Sony. Herpensheimer, disaffected by the loss of the company and his colleagues, leaves the software industry: ["I was ready to build a bunker and fill it with canned food because if this was how the world worked, I didn't want anything to do with it."](https://www.eurogamer.net/the-history-of-bleem)
 
-## Things Aren't So Settled: The Digital Millenium Copyright Act: 
+## Things Aren't So Settled: The Digital Millenium Copyright Act
+
 The EFF highlights the Genesis lacked a license agreement.
 
 Here comes in the DMCA which further complicates things. The DMCA was designed to prevent circumventio n...... There are narrow DMCA exemptions for reverse engineering whcih include ....
