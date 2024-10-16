@@ -8,6 +8,8 @@ draft: false
 
 On October 1st 2024, GDKChan took down the Ryujinx organization from GitHub after contact with Nintendo.
 
+As you will see, emulation and reverse engineering law are intertwined legally. 
+
 (Show notice of Yuzu site image)
 
 ## Table of Contents
@@ -21,7 +23,6 @@ On October 1st 2024, GDKChan took down the Ryujinx organization from GitHub afte
 - [Nintendo's Actions against Emulators](#nintendos-actions-against-emulators)
 - [Why the Recent Action against Ryujinx is a Big Deal](#why-the-recent-action-against-ryujinx-is-a-big-deal)
 - [What can be done?](#what-can-be-done)
-
 
 ## Why is Switch Emulation Development Important?
 
@@ -64,7 +65,7 @@ Some highlights from the suit:
 
 ### 2000: [Sony vs. Bleem!](https://www.copyright.gov/fair-use/summaries/sonycomputer-bleem-9thcir2000.pdf), ([Lawsuit](https://casetext.com/case/sony-computer-entertainment-america-v-bleem))
 
-Simultaneously to Connectix, Randy Linden (computer programmer who ported Doom to the SNES and Dragon's Lair to the C64) and David Herpolsheimer (marketing with IBM, Kodak, Apple) began work on Connectix  - Notably used dynamic recompilation, allowed for emulation enhancements (improved resolutions, anti-aliasing). bleem! envisioned it could be an easy way for developers to port their PlayStation games to PC. 
+Simultaneously to Connectix being developed, Randy Linden (computer programmer who ported Doom to the SNES and Dragon's Lair to the C64) and David Herpolsheimer (marketing with IBM, Kodak, Apple) began work on Connectix. With PC-exclusive enhancements (improved resolutions, anti-aliasing), bleem! envisioned it could be an easy way for developers to port their PlayStation games to PC. 
 
 Sony disagreed and sued them over copyright infringement over the usage of screenshots for comparative advertising; while the district court ruled in favor of Sony and set up a preliminary injunction against Sony, the appeals court overturned this. The court asserted Bleem as a competitor to Sony and ruled Bleem's use of screenshots was for comparative advertising and thus fair use - *"If sales of Sony consoles drop, it will be due to the Bleem emulator's technical superiority over the PlayStation console, not because Bleem used screen shots to illustrate that comparison"*.
 
@@ -72,25 +73,31 @@ Again, Bleem wins this case but again, Sony continues to sue. Linden goes to Son
 
 ## Things Aren't So Settled: The Digital Millenium Copyright Act
 
-The EFF highlights the Genesis lacked a license agreement.
+So reading this so far, you probably think reverse engineering for the purposes of creating an emulator is a slam dunk. Unfortunately, things will get more complicated. In 1998, the Digital Millennium Copyright Act (DMCA) was passed; while there were three main provisions, Section 1201 (anti-circumvention) is most relevant; it prevents circumvention of technological protection measures and trafficking tools primarily designed to aid this. However, there is a specific exemption for reverse engineering: 
 
-Here comes in the DMCA which further complicates things. The DMCA was designed to prevent circumventio n...... There are narrow DMCA exemptions for reverse engineering whcih include ....
+Section F: *"...circumvent a technological measure... for the sole purpose of identifying and analyzing those elements of the program that are necessary to achieve interoperability of an independently created computer program with other programs".*
 
-Blizzard v. BnetD5: Signing a EULA contract which prohibits reverse engineering of software does apply, thus the programmers waived their rights when they signed the contract. Furthermore, the anti-circumvention provisions of DMCA hold up which limited the possibilities. 
+There are few cases that focus on the DMCA interopability exemption, fewer that went to trial, and almost none relevant to emulation.
 
-Under [Apple v. Corellium](https://www.copyright.gov/fair-use/summaries/appleinc-corellium-sdfla2020.pdf), Judge Rodney Smith (US District Court for the Southern District of Florida) specifically highlighted that while Apple couldn't issue a summary judgement for the DMCA claim stemming from fair use protections, Corellium wasn't scot-free either; he opinoed that based on prior rulings, there would need to be a balanced approach between Section 1201 and Fair Use. However, Apple and Corellium settled this claim back in 2021 so this question never got resolved.
+- In [Davidson Associates v. Jung](https://casetext.com/case/davidson-associates-v-jung), as pointed out in the [EFF's discussion on the legality of reverse engineering](https://www.eff.org/issues/coders/reverse-engineering-faq), Blizzard's EULA waived the fair use rights of the developers and BnetD allowing non-genuine software to operate made the exemption invalid.
+- In [Apple v. Corellium](https://www.copyright.gov/fair-use/summaries/appleinc-corellium-sdfla2020.pdf) (Corellium created virtualization software for the iPhone), Judge Rodney Smith threw out the copyright infringement claims but didn't issue a summary judgement for Apple's DMCA claim; he opinoed that based on prior rulings, there would need to be a balanced approach between Section 1201 and Fair Use, [much to the charaign of the EFF](https://www.eff.org/deeplinks/2021/02/section-1201s-harm-security-research-shown-mixed-decision-corellium-case). However, Apple and Corellium settled the DMCA claim back in 2021 so this question never got resolved.
+
+The limited number of cases on DMCA interopability makes it hard to know how court would balance copyright and fair use and the DMCA and its exemptions. 
 
 ## Nintendo's Actions against Emulators
 
-- 1999: UltraHLE (emulator, N64) vs. Nintendo (lawsuit threat)
+Nintendo has negatively spoken out and taken actions against emulators ever since Nintendo threatened legal action against UltraHLE, an Nintendo 64 emulator, in 1999. Nintendo previously had a [webpage](https://archive.ph/aTJpk#selection-975.0-975.37) where it discussed game emulation and ROMs; case in point, it states the *"introduction of emulators created to play illegally copied Nintendo software represents the greatest threat to date to the intellectual property rights of video game developers"*. They later updated the webpage 
 - 2023: Dolphin (emulator, GameCube/Wii) / Valve vs. Nintendo
     - Nintendo's lawyers argue for this.
     - Dolphin's lawyers argue against this
-- 2024: Nintendo vs. Yuzu
+
+In 2024, Nintendo broke new ground by filing a lawsuit against an emulator (Yuzu which emulates the Nintendo Switch) for the first time.
     - Primary assertions Nintendo made
-    - Yuzu settled, didn't rely on 
+    - Yuzu settled, didn't rely on
 
 ## Why the Recent Action against Ryujinx is a Big Deal
+
+Hopefully with the context, it should be how this.
 
 - Solidifies the idea of open source not being a method of protecting against legal action
 - Shows the issue wasn't Yuzu specific but rather emulating modern platforms 
@@ -126,3 +133,5 @@ Sources:
 - [Legal Status of Emulation, Emulation General Wiki](https://emulation.gametechwiki.com/index.php/Legal_status_of_emulation)
 - [The history of bleem!, Eurogamer](https://www.eurogamer.net/the-history-of-bleem)
 - [Programming War Stories: Connectix, Aaron Giles Personal **Website**](https://aarongiles.com/programming/war-connectix/)
+- [DMCA - Copyright.org](https://www.copyright.gov/dmca/)
+- [DMCA - Cornell Legal Information Institute](https://www.law.cornell.edu/uscode/text/17/1201)
