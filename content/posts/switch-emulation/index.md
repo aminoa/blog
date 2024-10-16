@@ -21,6 +21,8 @@ As you will see, emulation and reverse engineering law are intertwined legally.
   - [2000: Sony vs. Bleem!, (Lawsuit)](#2000-sony-vs-bleem-lawsuit)
 - [Things Aren't So Settled: The Digital Millenium Copyright Act](#things-arent-so-settled-the-digital-millenium-copyright-act)
 - [Nintendo's Actions against Emulators](#nintendos-actions-against-emulators)
+  - [2023: Valve taking down Dolphin under Nintendo's Direction](#2023-valve-taking-down-dolphin-under-nintendos-direction)
+  - [2024: Nintendo vs. Tropic Haze](#2024-nintendo-vs-tropic-haze)
 - [Why the Recent Action against Ryujinx is a Big Deal](#why-the-recent-action-against-ryujinx-is-a-big-deal)
 - [What can be done?](#what-can-be-done)
 
@@ -73,11 +75,7 @@ Again, Bleem wins this case but again, Sony continues to sue. Linden goes to Son
 
 ## Things Aren't So Settled: The Digital Millenium Copyright Act
 
-So reading this so far, you probably think reverse engineering for the purposes of creating an emulator is a slam dunk. Unfortunately, things will get more complicated. In 1998, the Digital Millennium Copyright Act (DMCA) was passed; while there were three main provisions, Section 1201 (anti-circumvention) is most relevant; it prevents circumvention of technological protection measures and trafficking tools primarily designed to aid this. However, there is a specific exemption for reverse engineering: 
-
-Section F: *"...circumvent a technological measure... for the sole purpose of identifying and analyzing those elements of the program that are necessary to achieve interoperability of an independently created computer program with other programs".*
-
-There are few cases that focus on the DMCA interopability exemption, fewer that went to trial, and almost none relevant to emulation.
+So reading this so far, you probably think reverse engineering for the purposes of creating an emulator is a slam dunk. Unfortunately, things will get more complicated. In 1998, the Digital Millennium Copyright Act (DMCA) was passed; while there were three main provisions, Section 1201 (anti-circumvention) is most relevant; it prevents circumvention of technological protection measures and trafficking tools primarily designed to aid this. It carves out exemptions for reverse engineering, specifically for achieve interopability of an independently created program. There are few cases that focus on the DMCA interopability exemption, fewer that went to trial, and almost none relevant to emulation.
 
 - In [Davidson Associates v. Jung](https://casetext.com/case/davidson-associates-v-jung), as pointed out in the [EFF's discussion on the legality of reverse engineering](https://www.eff.org/issues/coders/reverse-engineering-faq), Blizzard's EULA waived the fair use rights of the developers and BnetD allowing non-genuine software to operate made the exemption invalid.
 - In [Apple v. Corellium](https://www.copyright.gov/fair-use/summaries/appleinc-corellium-sdfla2020.pdf) (Corellium created virtualization software for the iPhone), Judge Rodney Smith threw out the copyright infringement claims but didn't issue a summary judgement for Apple's DMCA claim; he opinoed that based on prior rulings, there would need to be a balanced approach between Section 1201 and Fair Use, [much to the charaign of the EFF](https://www.eff.org/deeplinks/2021/02/section-1201s-harm-security-research-shown-mixed-decision-corellium-case). However, Apple and Corellium settled the DMCA claim back in 2021 so this question never got resolved.
@@ -86,14 +84,17 @@ The limited number of cases on DMCA interopability makes it hard to know how cou
 
 ## Nintendo's Actions against Emulators
 
-Nintendo has negatively spoken out and taken actions against emulators ever since Nintendo threatened legal action against UltraHLE, an Nintendo 64 emulator, in 1999. Nintendo previously had a [webpage](https://archive.ph/aTJpk#selection-975.0-975.37) where it discussed game emulation and ROMs; case in point, it states the *"introduction of emulators created to play illegally copied Nintendo software represents the greatest threat to date to the intellectual property rights of video game developers"*. They later updated the webpage 
-- 2023: Dolphin (emulator, GameCube/Wii) / Valve vs. Nintendo
-    - Nintendo's lawyers argue for this.
-    - Dolphin's lawyers argue against this
+Nintendo has negatively spoken out and taken actions against emulators ever since they threatened legal action against UltraHLE, an Nintendo 64 emulator, in 1999.[^nintendocomments]
 
-In 2024, Nintendo broke new ground by filing a lawsuit against an emulator (Yuzu which emulates the Nintendo Switch) for the first time.
-    - Primary assertions Nintendo made
-    - Yuzu settled, didn't rely on
+### 2023: Valve taking down Dolphin under Nintendo's Direction
+
+When Dolphin, a Nintendo Gamecube/Wii emulator, announced it was coming to Steam, Valve's legal department contacted Nintendo for their approval. In response, Nintendo sent a letter to Valve which forwarded it to Dolphin stating that the emulator violates section 1201 of the DMCA by circumventing a technological protection measure by including the Wii Common Key (cryptographic keys used to decrypt Wii games at runtime). Dolphin emulator countered by stating that it squarely fell under the reverse engineering exemption stating Dolphin circumvents Wii disc encryption for interopability with Wii games. Furthermore, they cite that the exemption permitting sharing of derived information from reverse engineering on including the common key in the emulator. 
+
+### 2024: Nintendo vs. Tropic Haze
+
+- Nintendo broke new ground by filing a lawsuit against an emulator (Yuzu which emulates the Nintendo Switch) for the first time.
+- Primary assertions Nintendo made
+- Yuzu settled, didn't rely on
 
 ## Why the Recent Action against Ryujinx is a Big Deal
 
@@ -108,10 +109,6 @@ As seen on Reddit:
 - Emulation developers and advocated should be respected (ex. KD-11) 
 - Emulators should **not** hold off on advertising themselves, being funded via Patreon, showing screenshots/video announcements/etc.
 - "Fuck Nintendo" - this feels nice to say but this accomplishes little to nothing.
-
-Respond to Moon Channel video:
-
-
 
 ## What can be done?
 
@@ -135,3 +132,5 @@ Sources:
 - [Programming War Stories: Connectix, Aaron Giles Personal **Website**](https://aarongiles.com/programming/war-connectix/)
 - [DMCA - Copyright.org](https://www.copyright.gov/dmca/)
 - [DMCA - Cornell Legal Information Institute](https://www.law.cornell.edu/uscode/text/17/1201)
+
+[^nintendocomments]: Nintendo previously had a [webpage](https://archive.ph/aTJpk#selection-975.0-975.37) where it discussed game emulation and ROMs; case in point, it states the *"introduction of emulators created to play illegally copied Nintendo software represents the greatest threat to date to the intellectual property rights of video game developers"*. They released a newer page on [Intellectual Property](https://en-americas-support.nintendo.com/app/answers/detail/a_id/55888/~/intellectual-property-%26-piracy-faq) where the language was softened but still showed a harsh stance: *While we recognize the passion that players have for classic games, supporting emulation also supports the illegal piracy of our products*.
