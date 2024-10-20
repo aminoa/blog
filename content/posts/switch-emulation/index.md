@@ -1,20 +1,16 @@
 ---
 title: 'Nintendo is killing Switch Emulation via Murky Legal Theory'
-date: 2024-10-02T17:07:07-04:00
-draft: false
+date: 2024-10-16T17:07:07-04:00
+draft: true
 ---
 
-*All legal discussion is relevant to the United States only. Please don't use any of this as legal advice. If you find any errors with this article, please send an email to [a@stalereference.com](mailto:a@stalereference.com).*
+*All legal discussion is relevant to the United States only. Please don't use any of this as legal advice. If you find any errors with this article, please send an email to [a@stalereference.com](mailto:a@stalereference.com). Credit to Arstechnica for the inspiration for the cover photo, Ryujinx for the logo itself, and the sources below.*
 
-On October 1st 2024, GDKChan took down the Ryujinx organization from GitHub after contact with Nintendo.
-
-As you will see, emulation and reverse engineering law are intertwined legally. 
-
-(Show notice of Yuzu site image)
+On October 1st 2024, GDKChan was contacted by Nintendo and given an agreement to stop work on the Nintendo Switch Ryujinx, remove the organization, and all related assets, according to Ryujinx developer riperiperi. Ryujinx was still in [heavy development](https://x.com/RyujinxEmu/status/1841188744126480428) (including work on iOS/Android ports, native applets, and a metal backend) when the project ceased development. However, it didn't stay in the news for long, likely since Yuzu was taken down months earlier; I was shocked to see Nintendo essentially take Switch emulation offline, even with their previous actions, since I thought emulation protections would be stronger (as it turns out, this will be a complicated question to answer). There are few good discussions talking about the intersection of emulation and legality (Moon Channel and Hoeg Law's videos are two exceptions to this) so I did the research to make sense of how we ended up here and give steps for how the emulation community could fix this. 
 
 ## Table of Contents
 - [Table of Contents](#table-of-contents)
-- [Why is Switch Emulation Development Important?](#why-is-switch-emulation-development-important)
+- [Why is (Switch) Emulation Development Important?](#why-is-switch-emulation-development-important)
 - [History Time! Sega, Sony, and Establishing Fair Use via Reverse Engineering](#history-time-sega-sony-and-establishing-fair-use-via-reverse-engineering)
   - [1992: Sega vs. Accolade, (Lawsuit)](#1992-sega-vs-accolade-lawsuit)
   - [2000: Sony vs. Connectix, (Lawsuit)](#2000-sony-vs-connectix-lawsuit)
@@ -22,19 +18,18 @@ As you will see, emulation and reverse engineering law are intertwined legally.
 - [Things Aren't So Settled: The Digital Millenium Copyright Act](#things-arent-so-settled-the-digital-millenium-copyright-act)
 - [Nintendo's Actions against Emulators](#nintendos-actions-against-emulators)
   - [2023: Valve taking down Dolphin under Nintendo's Direction](#2023-valve-taking-down-dolphin-under-nintendos-direction)
-  - [2024: Nintendo vs. Tropic Haze](#2024-nintendo-vs-tropic-haze)
+  - [2024: Nintendo vs. Tropic Haze (Yuzu)](#2024-nintendo-vs-tropic-haze-yuzu)
 - [Why the Recent Action against Ryujinx is a Big Deal](#why-the-recent-action-against-ryujinx-is-a-big-deal)
-- [What can be done?](#what-can-be-done)
+- [What Can Be Done?](#what-can-be-done)
+  - [Emulator Developers](#emulator-developers)
+    - [Political Advocacy](#political-advocacy)
+  - [Emulator Users](#emulator-users)
 
-## Why is Switch Emulation Development Important?
+## Why is (Switch) Emulation Development Important?
 
-- 1) Short term benefit: Users should have a right for interopability
-- 2) Long term benefit: You can't wait until a product is done to start emulation development 
-    - a) Switch emulation isn't finished 
-    - b) Imagine interest in Wii U emulation now that the console is finished - if Nintendo took this action against Exzap, would there be any interest in emulating the failed Nintendo console?
+**Short Term Benefit**: Users have a right for software interopability. All modern computing platforms have creative and functional elements. For a given sotware program, a user should have the choice of platform (which recreate the functional elements) following fair use (whether it be on original hardware or an emulator). 
 
-- Furthermore, I'll argue that preserving the legality of emulation is of utmost value, in regard to the principles of interopability and of preservation
-- Nintendo is sidestepping legal precedent and enforce a culture of fear
+**Long Term Benefit**: All media is temporary. Right now, [87% of classic video games are unavailable for purchase](https://gamehistory.org/87percent/). Regardless of what lobbying groups (the Entertainment Software Association) or computer manufacturers say, it's not feasible or even expected that a company should invest in commercially unviable projects to preserve its past. Open source emulation is the only effective method at preserving software[^emulation_wait].
 
 ## History Time! Sega, Sony, and Establishing Fair Use via Reverse Engineering 
 
@@ -75,12 +70,11 @@ Again, Bleem wins this case but again, Sony continues to sue. Linden goes to Son
 
 ## Things Aren't So Settled: The Digital Millenium Copyright Act
 
-So reading this so far, you probably think reverse engineering for the purposes of creating an emulator is a slam dunk. Unfortunately, things will get more complicated. In 1998, the Digital Millennium Copyright Act (DMCA) was passed; while there were three main provisions, Section 1201 (anti-circumvention) is most relevant; it prevents circumvention of technological protection measures and trafficking tools primarily designed to aid this. It carves out exemptions for reverse engineering, specifically for achieve interopability of an independently created program. There are few cases that focus on the DMCA interopability exemption, fewer that went to trial, and almost none relevant to emulation.
+So reading this so far, you probably think reverse engineering for the purposes of creating an emulator is a slam dunk. Unfortunately, things will get more complicated. In 1998, the Digital Millennium Copyright Act (DMCA) was passed; while there were three main provisions, Section 1201 (anti-circumvention) is most relevant; it prevents circumvention of technological protection measures and trafficking tools primarily designed to aid this. 
 
-- In [Davidson Associates v. Jung](https://casetext.com/case/davidson-associates-v-jung), as pointed out in the [EFF's discussion on the legality of reverse engineering](https://www.eff.org/issues/coders/reverse-engineering-faq), Blizzard's EULA waived the fair use rights of the developers and BnetD allowing non-genuine software to operate made the exemption invalid.
-- In [Apple v. Corellium](https://www.copyright.gov/fair-use/summaries/appleinc-corellium-sdfla2020.pdf) (Corellium created virtualization software for the iPhone), Judge Rodney Smith threw out the copyright infringement claims but didn't issue a summary judgement for Apple's DMCA claim; he opinoed that based on prior rulings, there would need to be a balanced approach between Section 1201 and Fair Use, [much to the charaign of the EFF](https://www.eff.org/deeplinks/2021/02/section-1201s-harm-security-research-shown-mixed-decision-corellium-case). However, Apple and Corellium settled the DMCA claim back in 2021 so this question never got resolved.
-
-The limited number of cases on DMCA interopability makes it hard to know how court would balance copyright and fair use and the DMCA and its exemptions. 
+There is a reverse engineering exemption, 1201(f), permitting cicrcumvention and making the information/tooling public in the pursuit of achieving interopability of an independently created program. However, there has been very few cases that cite this exemption, leaving little precedent to predict future cases.
+- In [Davidson Associates v. Jung](https://casetext.com/case/davidson-associates-v-jung), where Blizzard successfully sued the lead developers of the bnetd third party client; revelant is that the exemption was invalid here since the software allowed non-genuine Blizzard software to function. However, there are other stipulations (including that the developers signed a EULA waiving their fair use rights) that make it difficult to directly apply this case[^eff_bnetd].
+- In [Apple v. Corellium](https://www.copyright.gov/fair-use/summaries/appleinc-corellium-sdfla2020.pdf) (Corellium created virtualization software for the iPhone), Judge Rodney Smith threw out the copyright infringement claims but didn't issue a summary judgement for Apple's DMCA claim; he opinoed that based on prior rulings, there would need to be a balanced approach between Section 1201 and fair use, [much to the charaign of the EFF](https://www.eff.org/deeplinks/2021/02/section-1201s-harm-security-research-shown-mixed-decision-corellium-case). However, Apple and Corellium settled the DMCA claim back in 2021 so this question never got resolved. 
 
 ## Nintendo's Actions against Emulators
 
@@ -90,42 +84,62 @@ Nintendo has negatively spoken out and taken actions against emulators ever sinc
 
 When Dolphin, a Nintendo Gamecube/Wii emulator, announced it was coming to Steam, Valve's legal department contacted Nintendo for their approval. In response, Nintendo sent a letter to Valve which forwarded it to Dolphin stating that the emulator violates section 1201 of the DMCA by circumventing a technological protection measure by including the Wii Common Key (cryptographic keys used to decrypt Wii games at runtime). Dolphin emulator countered by stating that it squarely fell under the reverse engineering exemption stating Dolphin circumvents Wii disc encryption for interopability with Wii games. Furthermore, they cite that the exemption permitting sharing of derived information from reverse engineering on including the common key in the emulator. 
 
-### 2024: Nintendo vs. Tropic Haze
+### 2024: [Nintendo vs. Tropic Haze (Yuzu)](https://s3.documentcloud.org/documents/24444407/nintendo-sues-yuzu-emulator.pdf)
 
-- Nintendo broke new ground by filing a lawsuit against an emulator (Yuzu which emulates the Nintendo Switch) for the first time.
-- Primary assertions Nintendo made
-- Yuzu settled, didn't rely on
+On February 26th, 2024, Nintendo filed a suit against Yuzu making claims of copyright and DMCA infringements, marking the first time the company took legal action against an emulator. Bunnei, previously the co-creator of Citra (3DS emulator) created the open source Nintendo Switch emulator Yuzu, managed by Rhode Island based Tropic LLC. Its patreon eventually grew to $30,000 (spiking when *The Legend of Zelda: Tears of the Kingdom released*) and was compatible with around 1872 games. Rather than attempting to fight the suit, Tropic Haze settled with Nintendo for $2.4 million and stopped development and distribution of all Yuzu and Citra-related code. 
+
+However, it's important to look at to see the potential legal arguments that Nintendo or another company would make in a future emulation lawsuit. Most of the arguments the plaintiff or defendent would make are untested so I can only speculate. I'll separate Nintendo's 5 counts into three groups.
+
+<!-- ![Yuzu Shutdown Notice](yuzu-shutdown-notice.png) -->
+
+1) Trafficking of circumvention technology (2 counts)
+    - Tropic Haze is trafficking its tool, Yuzu, that is primarily designed to circumvent game encryption
+    - Quickstart guide links to tools is trafficking of console circumvention tools
+2) Circumvention of technological protection measures (1 count)
+    - Game (title.key)/console decryption (prod.keys)
+3) Reproducing/distributing protected works (2 counts)
+    - Dumping game ROMs is copyright infringement 
+    - Some Yuzu developers downloaded ROMs or shared ROMs between each other 
+    - Yuzu responsible for its users infringement
+
+Notice that Nintendo's strategy is primarily to demonstrate DMCA violations rather than copyright infringement (ala Connectix/Bleem) since copyright has stronger fair use protections but the DMCA reverse engineering exemption is narrower and mostly untested. In particular, citing Richard Hoeg, a business attorney, the trafficking claim is the strongest, specifically with Nintendo citing the quickstart guide (links decryption tools including TegraRcmGUI, Lockpick_RCM, and NXDumpTool) as evidence of Tropic Haze trafficking (spreading) circumvention tools. It's a novel theory, however, and there may be a corresponding novel defense that could cite 1201(f) or even fair use.
+
+On the other hand, I would argue that Nintendo claiming that Yuzu is primarily a circumvention tool is a stretch (it's an emulator!). Furthermore, bypassing console TPMs is likely clear based on section 1201(f); decryption of game files (and dumping in general) is more grey, especially since this is now on the user side. Finally, I would argue the claims about copyright (minus the negligant behavior of some of the Yuzu developers) is less strong based on the decades of legal precedent and the fact that Yuzu did take steps to distance itself from piracy (piracy discussion was banned in its Discord server, had guide to dump games though Nintendo argues this is illegal). 
 
 ## Why the Recent Action against Ryujinx is a Big Deal
 
-Hopefully with the context, it should be how this.
+There is a mess of tangled, difficult, and untested text to decipher through the DMCA. However, Nintendo is attempting to use novel legal theories to shift the balance of the DMCA against the decades of reverse engineering precedent. Ryujinx and Yuzu's takedowns further demonstrate that open source doesn't provide a legal shield from litigation. Finally, despite what some commenters online have stated, the issue wasn't Yuzu specific but emulation that relies on decryption mechanisms (in other words, all modern game emulation [^emulation_keys]). A couple more sentiments I saw online that I would like to address. 
 
-- Solidifies the idea of open source not being a method of protecting against legal action
-- Shows the issue wasn't Yuzu specific but rather emulating modern platforms 
+- *"Switch emulation should go under cover"*: No! The Ryujinx software engineers, [including gdkchan, Ac_K, riperiperi, LDj3SNuD, emmauss, Moosehunter, TSRBerry, Yoshiyes](https://ryujinx.org/) who develop open source emulation should be respected, praised and well-known. This isn't a user pirating video games. In many decades, when the Nintendo Switch store front is long dead and its game consoles begin to fail, game emulation software created by these developers will be the only mechanism to play this software.
+- *"Emulators should hold off on advertising themselves, being funded via Patreon, showing screenshots/video announcements/etc"*: The current precedent is all based off of commerical emulation projects; funding permits an emulator to progress further. 
 
-As seen on Reddit:
+## What Can Be Done?
 
-- Switch emulation shouldn't go under cover
-- Emulation developers and advocated should be respected (ex. KD-11) 
-- Emulators should **not** hold off on advertising themselves, being funded via Patreon, showing screenshots/video announcements/etc.
-- "Fuck Nintendo" - this feels nice to say but this accomplishes little to nothing.
+*"Fuck Nintendo"*. This may be your reaction after reading this/the dozens of news articles for Nintendo's actions; I find this a bit hollow. Instead, here are some steps that I think would benefit the emulation community. 
 
-## What can be done?
+### Emulator Developers
 
-- Legal defense funding
-    - Ideally also legally support from organizations such as the EFF or the Software Preservation Group (network)
-    - This is especially important for emulators for recent systems (ex. [ShadPS4](https://github.com/shadps4-emu/shadPS4))
-    - This would slow down development but would prevent a large corportation from steamrolling an emulator later in its life
+- Ideally there would legally support from organizations such as the EFF or the Software Preservation Group (network)
+- This is especially important for emulators for recent systems (ex. [ShadPS4](https://github.com/shadps4-emu/shadPS4))
+- This would slow down development but would prevent a large corportation from steamrolling an emulator later in its life
 
-- Legislation clarifying anti-circumvention bypass for software being allowed for the purposes of software interopability (rather than relying on legal precedent)
-    - This could potentially be done via a DMCA exemption though those have expiration dates
-    - Make it harder for Nintendo or another copyright to cite the DMCA in litigation
-    - Ideally this would involve collaborating with larger software rights organizations such as the EFF or the Software Preservation Network
+#### Political Advocacy
+- Improve legislation clarifying anti-circumvention bypass for software being allowed for the purposes of software interopability (rather than relying on legal precedent)
+- This could potentially be done via a DMCA exemption though those have expiration dates
+  - Make it a point that the inclusion of functional elements as part of the decryption process for emulators would fall under the reverse engineering exemption
+  - An example would be clarifying the rules for cracking game encryption for personal backup/use, especially since this would go neatly with the current emulator precedent
+  - Make it harder for Nintendo to cite the DMCA in litigation
+- Ideally this would involve collaborating with larger software rights organizations such as the EFF or the Software Preservation Network
 
-- Precautions for Future Emulators
-    - Obvious but don't hint at/discuss piracy, especially from lead developers (Nintendo specifically cited a Yuzu maintainer noting that their users probably pirate Switch firmware in their lawsuit)
+### Emulator Users
+  - Spread awareness of the specific issues of the DMCA rather than broad complaints: decrypted game dumps for personal archive should not be legally grey!
+  - Share this article 😉
 
 Sources:
+
+[^moonchannel_dolphin]: [Why Are Emulators Legal? Dolphin vs. Nintendo, and the Fate of Emulation [Great Emu War Pt. 1]](https://www.youtube.com/watch?v=wROQUZDCIMI)
+- [Nintendo vs. Yuzu | A Legal Look at Emulation and the DMCA, Hoeg Law](https://www.youtube.com/watch?v=ijljctHpDfI)
+- [A Yuzu Post-Mortem: The Great Emu-War](https://www.youtube.com/watch?v=7rzWR9JP1WE)
 
 - [Legal Status of Emulation, Emulation General Wiki](https://emulation.gametechwiki.com/index.php/Legal_status_of_emulation)
 - [The history of bleem!, Eurogamer](https://www.eurogamer.net/the-history-of-bleem)
@@ -133,4 +147,10 @@ Sources:
 - [DMCA - Copyright.org](https://www.copyright.gov/dmca/)
 - [DMCA - Cornell Legal Information Institute](https://www.law.cornell.edu/uscode/text/17/1201)
 
+[^emulation_wait]: You can't wait until the Nintendo Switch is dead to start emulation development. It's needed to start when there is more interest especially since emulation is (almost) never finished. Imagine if Nintendo sent a takedown against [Exzap](https://github.com/Exzap) to stifle Cemu and Wii U emulation was permanently crippled (like most Microsoft consoles). The library of games would have been limited to the original hardware.
+
 [^nintendocomments]: Nintendo previously had a [webpage](https://archive.ph/aTJpk#selection-975.0-975.37) where it discussed game emulation and ROMs; case in point, it states the *"introduction of emulators created to play illegally copied Nintendo software represents the greatest threat to date to the intellectual property rights of video game developers"*. They released a newer page on [Intellectual Property](https://en-americas-support.nintendo.com/app/answers/detail/a_id/55888/~/intellectual-property-%26-piracy-faq) where the language was softened but still showed a harsh stance: *While we recognize the passion that players have for classic games, supporting emulation also supports the illegal piracy of our products*.
+
+[^eff_bnetd]: [Coders’ Rights Project Reverse Engineering FAQ, EFF](https://www.eff.org/issues/coders/reverse-engineering-faq)
+
+[^emulation_keys]:[Emulators and bundling crypto keys: is it common? is it illegal?, delroth's homepage](https://delroth.net/posts/emulation-crypto-keys-copyright-dmca/)
