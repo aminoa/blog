@@ -5,28 +5,83 @@ draft: false
 summary: Reading I did on Linus Torvalds, the FOSS movement and Richard Stallman
 ---
 
-## Forward
+# Forward
 
 *If you take nothing else from this post, read [For Fun and Profit: A History of the FOSS Revolution (2017, Tozzi)](https://mitpress.mit.edu/9780262551786/for-fun-and-profit/) and take a look at the timeline.*
 
-Last summer, before writing Feature, I wanted to improve my knowledge of the history of open source software. While I initially focused on Linus Torvalds, I broadened my research (mainly reading books/articles but also watching YouTube videos) to focus on the movement as a whole. This post won't be as polished as my previous one; it is more of a research document rather than a regular blog post. Regardless, you may find this fun to read! 
+Last summer, before writing Feature, I wanted to improve my knowledge of the history of open source software. While I primarily focused on Linus Torvalds, I broadened my research (reading books/articles and watching YouTube videos) to focus on the movement as a whole. This post won't be as polished as my previous one; it is more of a research document rather than a regular blog post, but it may be fun to skim through!
+
+## Table of Contents
 
 - [Forward](#forward)
-- [Book Summaries](#book-summaries)
-  - [For Fun and Profit: A History of the FOSS Revolution (Tozzi, 2017)](#for-fun-and-profit-a-history-of-the-foss-revolution-tozzi-2017)
-    - [Chapter 1: The Path to Revolution Unix and the Origins of Hacker Culture](#chapter-1-the-path-to-revolution-unix-and-the-origins-of-hacker-culture)
-    - [Chapter 2: Inventing the FOSS Revolution Hacker Crisis, GNU, and the Free Software Foundation](#chapter-2-inventing-the-foss-revolution-hacker-crisis-gnu-and-the-free-software-foundation)
-    - [Chapter 3: A Kernel of Hope](#chapter-3-a-kernel-of-hope)
-    - [Chapter 4: The Moderate FOSS Revolution](#chapter-4-the-moderate-foss-revolution)
-    - [Chapter 5: The FOSS Revolutionary Wars](#chapter-5-the-foss-revolutionary-wars)
-    - [Chapter 6: Ending the FOSS Revolution?](#chapter-6-ending-the-foss-revolution)
-  - [Just for Fun: The Story of an Accidental Revolutionary (Torvalds, 2002)](#just-for-fun-the-story-of-an-accidental-revolutionary-torvalds-2002)
-  - [Free Software, Free Society (Stallman, 2002)](#free-software-free-society-stallman-2002)
-  - [The Cathedral and the Bazaar (Raymond, 2001)](#the-cathedral-and-the-bazaar-raymond-2001)
-  - [(Bonus: Linus' Master of Science Thesis) - Linux: A Portable Operating System (1997)](#bonus-linus-master-of-science-thesis---linux-a-portable-operating-system-1997)
-- [Timeline](#timeline)
-- [Thoughts](#thoughts)
-- [Philosophy of Richard Stallman](#philosophy-of-richard-stallman)
+  - [Table of Contents](#table-of-contents)
+  - [Timeline](#timeline)
+  - [Book Summaries](#book-summaries)
+    - [For Fun and Profit: A History of the FOSS Revolution (Tozzi, 2017)](#for-fun-and-profit-a-history-of-the-foss-revolution-tozzi-2017)
+      - [Chapter 1: The Path to Revolution Unix and the Origins of Hacker Culture](#chapter-1-the-path-to-revolution-unix-and-the-origins-of-hacker-culture)
+      - [Chapter 2: Inventing the FOSS Revolution Hacker Crisis, GNU, and the Free Software Foundation](#chapter-2-inventing-the-foss-revolution-hacker-crisis-gnu-and-the-free-software-foundation)
+      - [Chapter 3: A Kernel of Hope](#chapter-3-a-kernel-of-hope)
+      - [Chapter 4: The Moderate FOSS Revolution](#chapter-4-the-moderate-foss-revolution)
+      - [Chapter 5: The FOSS Revolutionary Wars](#chapter-5-the-foss-revolutionary-wars)
+      - [Chapter 6: Ending the FOSS Revolution?](#chapter-6-ending-the-foss-revolution)
+    - [Just for Fun: The Story of an Accidental Revolutionary (Torvalds, 2002)](#just-for-fun-the-story-of-an-accidental-revolutionary-torvalds-2002)
+    - [Free Software, Free Society (Stallman, 2002)](#free-software-free-society-stallman-2002)
+    - [The Cathedral and the Bazaar (Raymond, 2001)](#the-cathedral-and-the-bazaar-raymond-2001)
+    - [Bonus!: Linus' Master of Science Thesis - Linux: A Portable Operating System (1997)](#bonus-linus-master-of-science-thesis---linux-a-portable-operating-system-1997)
+      - [0. Intro](#0-intro)
+      - [1. Linux Design/Implementation](#1-linux-designimplementation)
+      - [2. Compatibility](#2-compatibility)
+      - [3. Software Interface Portability](#3-software-interface-portability)
+      - [4. Hardware Portability Issues](#4-hardware-portability-issues)
+  - [Thoughts](#thoughts)
+  - [Philosophy of Richard Stallman](#philosophy-of-richard-stallman)
+  - [Footnotes](#footnotes)
+  - [Other Sources:](#other-sources)
+
+## Timeline
+
+The Research/Pre-Microcomputer Era:
+
+- 1964: Initial development of Multics, a time-sharing OS from MIT, General Electric, and Bell Labs
+- 1969: Ken Thompson and Dennis Ritchie begin developing Unix to replace Multics
+- 1973: Unix is rewritten in the C programming language
+- 1978: First release of BSD, a Unix alternative
+
+The GNU Era:
+
+- 1983: Richard Stallman launches the GNU project
+- 1984: X Window development starts (graphical backend) 
+- 1985: Release of Emacs, the first GNU project
+- 1989: Launch of GPLv1 license
+- 1990: Tim Berners-Lee created the World Wide Web
+- 1991: Linus Torvalds starts the Linux Kernel
+
+The Year of the Linux Server Era:
+
+- 1994: Ian Murdock, with support of the FSF, launches Debian
+- 1994: PHP Language created
+- 1994: Red Hat formed
+- 1996: MySQL releases, completing the LAMP stack
+- 1997: First essay of the 'The Cathedral and the Bazaar' releases
+- 1998: Release of KDE 
+- 1998: Open Source Initiative founded by Raymond (Open Source camp invited, not Stallman)
+- 1998: Netscape Navigator open sourced
+- 1998: Microsoft "Halloween Documents" leaked
+- 1999: Release of GNOME
+- 2001: Lawrence Lessig creates Creative Commons
+
+The Open Source/Corporate Integration Era:
+
+- 2004: Ubuntu founded by Mark Shuttleworth
+- 2005: Linus creates Git 
+- 2008: Google releases the First version of Android
+- 2008: GitHub founded
+- 2010: OpenStack (cloud computing platform) created by Rackspace and NASA
+- 2011: Google releases the Chromebook
+- 2015: Microsoft adds the 'Windows Subsystem for Linux' to their OS
+- 2018: Microsoft acquires Github for $7.5 billion
+- 2019: IBM acquires Red Hat
+
 
 ## Book Summaries
 
@@ -106,65 +161,58 @@ I've been using the word FOSS but really the free software portion isn't relevan
 
 ### Just for Fun: The Story of an Accidental Revolutionary ([Torvalds](https://en.wikipedia.org/wiki/Linus_Torvalds), 2002)
 
-
 ### Free Software, Free Society ([Stallman](https://www.stallman.org/), 2002)
 
 ### The Cathedral and the Bazaar ([Raymond](https://en.wikipedia.org/wiki/Eric_S._Raymond), 2001)
 
-### (Bonus: Linus' Master of Science Thesis) - Linux: A Portable Operating System (1997)
+### Bonus!: Linus' Master of Science Thesis - [Linux: A Portable Operating System](https://www.cs.helsinki.fi/petri/index_files/linus.pdf) (1997)
 
-## Timeline
+#### 0. Intro
 
-The Research/Pre-Microcomputer Era:
+The most important goal of the Linux Kernel was portability (both in terms of hardware, working on different CPU architectures, and software, with software being compatible with different operating systems). One of the most important concepts was the Linux kernel virtual machine - it provides two layers: one between the kernel and userspace (exposed at syscalls) and one between the kernel and the hardware (provided via drivers). The rest of the paper sections will go over different design challenges and solutions.
 
-- 1964: Initial development of Multics, a time-sharing OS from MIT, General Electric, and Bell Labs
-- 1969: Ken Thompson and Dennis Ritchie begin developing Unix to replace Multics
-- 1973: Unix is rewritten in the C programming language
-- 1978: Development of BSD, a Unix alternative, begins
+#### 1. Linux Design/Implementation
 
-The GNU Era:
+Linux doesn't use a microkernel (splitting the kernel into chunks) due to performance issues. Also, as the kernel is open source, instead of relying on one fixed binary, the Linux kernel can be configured to add or remove specific features at compile-time. More design goals will include simplicity, efficiency and of course, compatibility.
 
-- 1983: Richard Stallman launches the GNU project
-- 1984: X Window development starts (graphical backend) 
-- 1985: Release of Emacs, the first GNU project
-- 1989: Launch of GPLv1 license
-- 1990: Tim Berners-Lee created the World Wide Web
-- 1991: Linus Torvalds starts the Linux Kernel
+#### 2. Compatibility
 
-The Year of the Linux Server Era:
+The design for achieving compatibility was ensuring UNIX compatibility which limits the userland-kernel interface. 
 
-- 1994: Ian Murdock, with support of the FSF, launches Debian
-- 1994: PHP Language created
-- 1994: Red Hat formed
-- 1998: Release of KDE 
-- 1998: Open Source Initiative founded by Raymond (Open Source camp invited, not Stallman)
-- 1998: Netscape Navigator open sourced
-- 1998: Microsoft "Halloween Documents" leaked
-- 1999: Release of GNOME
-- 2001: The Cathedral and the Bazaar released
-- 2001: Lawrence Lessig creates Creative Commons
+Linux components included process handling, memory management, a file system, network access, drivers (each divided into its own folder), and the virtual machine implementation. For each separate hardware architecture, inline assembly can map any VM semantics onto the hardware to minimize performance loss.
 
-The Open Source Era:
+#### 3. Software Interface Portability
 
-- 2004: Ubuntu founded by Mark Shuttleworth
-- 2005: Linus creates Git 
-- 2008: Google releases the First version of Android
-- 2008: GitHub founded
-- 2011: Google releases the Chromebook
-- 2015: Microsoft adds the 'Windows Subsystem for Linux' to their OS
+Again, this is constrained by the POSIX interface.
+
+There was also the idea of operating system 'personalities' which was the idea that the same platform may have multiple interface abstractions (besides just POSIX). (As seen on the man page, "Linux supports different execution domains, or personalities, for each process... among other things tell Linux how to map signal numbers into signal actions". While popular in the 90s, the rise of virtualization killed this idea).
+
+#### 4. Hardware Portability Issues
+
+While a C compiler does provide cross platform compilation, there are a host of issues that come after. First are the issues that come with data. Consistent data sizes are important for networking and file systems so a types header file is required for some platforms. To handle byte alignment (or an object being stored at an address that's a multiple of 8/4/etc.), the kernel will assume alignment and then use a trap handler to handle exceptions. Byte order is handled with functions to convert between big-endian and little-endian.
+
+Memory management must be fast and simple, even without hardware standards. CPUs have a feature known as a Translation Lookaside Buffer (TLB) which shows recent translations of virtual memory to physical memory. Operating system page tables handle translating virtual addresses to physical addresses since processes are given the illusion of a continuous address space and need to have a mechanism to translate the addresses.   Different CPUs have different methods for handling virtual memory (such as using page table trees (or multiple levels of page tables), a hash table, or even no architecture-specified page tables). 
+
+The strategy the Linux kernel uses is to use the linux kernel virtul machine as the intermediary. The memory management to the Linux kernel VM is the same across platforms, with architecture-specific code after. This requires page tables of the kernel VM and physical memory and they and the TLB need to be kept in sync. 
+
+Speaking of CPU caches, cache coherency (syncing of multiple processor caches) is also required. Instruction caches are handled by invalidating stale cache entries during memory management while data cache coherency is more complex and not handled with shared shared memory maps. For multiprocessor handling, atomicity is provided for kernel data structures via kernel locks.
+
+Finally, device drivers (which comprimise half of the kernel) provide I/O abstraction though the PCI standard is helping cut down on the work.
 
 ## Thoughts
 
-- Tax breaks/financial incentives for developers creating FOSS  
-- A development methodology vs. a social movement
+- Stallman highlights tax breaks/financial incentives for developers creating FOSS, which sounds interesting
+- Key difference: "A development methodology vs. a social movement" - the open source initiative really does cover the ideas Stallman advocated for, but there is definitely a de-emphasis on the moral ideas
+- His philosophy seems archaic and non feasible even a decade ago - almost all modern software will connect to a cloud service and the rise of AI tooling has only accelerated that change.
+- Speaking of AI, the [Open Source AI Definition from the OSI](https://opensource.org/ai/open-source-ai-definition) focuses on open source machine learning systems, highlighting data access (where to obtain the data, how its labeled, processed), the code for training/running the system, and the weight parameters for models. 
 
 ## Philosophy of Richard Stallman
 
 - Enveloped in controversies later stalled him  
-- His philosophy seems archaic and non feasible even a decade ago  
-- His movement has primarily an ethical view, not a technological one
 - GNU/Linux debate \- his values are right but there's an advocacy limit before people want to tune you out and RMS has not found his limit  
 - Epstein Controversy: Got back on the open source board in 2021, but furthered decline of his influence.
+
+## Footnotes
 
 [^manpages]: The first man pages were created in 1971. 
 
@@ -192,3 +240,8 @@ The Open Source Era:
 [^netscapeinfo]: Raymond’s notion of Linus’ Law (more devs minimizes bugs) and the development methodology and analogy he drew of the cathedral and the bazaar was quite novel compared to Brook’s Law. This utilitarian appeal over ideology as well as recognizing previous FOSS work moved Netscape executives to open source their code (1998). Netscape also looked to the community when picking a license (not finding BSD/GPL appropriate) and this led to the Netscape Public License and Mozilla Public License (for code after open sourcing); while FOSS leaders viewed this positively, few developers improved Netscape and the project faltered until 2003 when AOL (owner of Netscape) reduced support for Mozilla; a setback but one the open source community could push through.  
 
 [^ubuntupopularity]: Shuttleworth argues that Ubuntu focus on usability, commercial backing, and willingness to ignore factions of its userbase contributed to its popularity.   
+
+## Other Sources:
+
+- [The story behind Open Source Software, Saumo Pal](https://www.btw.so/blog/history-of-open-source-software/)
+- [StackOverflow - What are operating-system personalities?](https://stackoverflow.com/questions/52136857/what-are-operating-system-personalities)
