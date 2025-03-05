@@ -7,7 +7,7 @@ summary: Reading I did on Linus Torvalds, the FOSS movement and Richard Stallman
 
 # Forward
 
-*If you take nothing else from this post, read [For Fun and Profit: A History of the FOSS Revolution (2017, Tozzi)](https://mitpress.mit.edu/9780262551786/for-fun-and-profit/) and take a look at the timeline.*
+*If you take nothing else from this post, read [For Fun and Profit: A History of the FOSS Revolution (2017, Tozzi)](https://mitpress.mit.edu/9780262551786/for-fun-and-profit/) and take a look at the timeline and maybe my forwards for the books.*
 
 Last summer, before writing Feature, I wanted to improve my knowledge of the history of open source software. While I primarily focused on Linus Torvalds, I broadened my research (reading books/articles and watching YouTube videos) to focus on the movement as a whole. This post won't be as polished as my previous one; it is more of a research document rather than a regular blog post, but it may be fun to skim through!
 
@@ -18,6 +18,7 @@ Last summer, before writing Feature, I wanted to improve my knowledge of the his
   - [Timeline](#timeline)
   - [Book Summaries](#book-summaries)
     - [For Fun and Profit: A History of the FOSS Revolution (Tozzi, 2017)](#for-fun-and-profit-a-history-of-the-foss-revolution-tozzi-2017)
+      - [*Forward*](#forward-1)
       - [Chapter 1: The Path to Revolution Unix and the Origins of Hacker Culture](#chapter-1-the-path-to-revolution-unix-and-the-origins-of-hacker-culture)
       - [Chapter 2: Inventing the FOSS Revolution Hacker Crisis, GNU, and the Free Software Foundation](#chapter-2-inventing-the-foss-revolution-hacker-crisis-gnu-and-the-free-software-foundation)
       - [Chapter 3: A Kernel of Hope](#chapter-3-a-kernel-of-hope)
@@ -25,14 +26,21 @@ Last summer, before writing Feature, I wanted to improve my knowledge of the his
       - [Chapter 5: The FOSS Revolutionary Wars](#chapter-5-the-foss-revolutionary-wars)
       - [Chapter 6: Ending the FOSS Revolution?](#chapter-6-ending-the-foss-revolution)
     - [Just for Fun: The Story of an Accidental Revolutionary (Torvalds, 2002)](#just-for-fun-the-story-of-an-accidental-revolutionary-torvalds-2002)
+      - [Birth of a Nerd](#birth-of-a-nerd)
+      - [Birth of an Operating System](#birth-of-an-operating-system)
+      - [King of the Ball](#king-of-the-ball)
+      - [End Sections (IP/End to Control/Amusement Ride Ahead/Why Open Source/Fame of Fortune/Meaning of Life II)](#end-sections-ipend-to-controlamusement-ride-aheadwhy-open-sourcefame-of-fortunemeaning-of-life-ii)
     - [Free Software, Free Society (Stallman, 2002)](#free-software-free-society-stallman-2002)
     - [The Cathedral and the Bazaar (Raymond, 2001)](#the-cathedral-and-the-bazaar-raymond-2001)
     - [Bonus!: Linus' Master of Science Thesis - Linux: A Portable Operating System (1997)](#bonus-linus-master-of-science-thesis---linux-a-portable-operating-system-1997)
+      - [*Forward*](#forward-2)
       - [0. Intro](#0-intro)
       - [1. Linux Design/Implementation](#1-linux-designimplementation)
       - [2. Compatibility](#2-compatibility)
       - [3. Software Interface Portability](#3-software-interface-portability)
       - [4. Hardware Portability Issues](#4-hardware-portability-issues)
+  - [Interviews with Linus Torvalds](#interviews-with-linus-torvalds)
+    - [*Forward*](#forward-3)
   - [Thoughts](#thoughts)
   - [Philosophy of Richard Stallman](#philosophy-of-richard-stallman)
   - [Footnotes](#footnotes)
@@ -55,6 +63,7 @@ The GNU Era:
 - 1989: Launch of GPLv1 license
 - 1990: Tim Berners-Lee created the World Wide Web
 - 1991: Linus Torvalds starts the Linux Kernel
+- 1992: Tanenbaum-Torvalds debate (on comp.os.minix usenet group)
 
 The Year of the Linux Server Era:
 
@@ -63,7 +72,7 @@ The Year of the Linux Server Era:
 - 1994: Red Hat formed
 - 1996: MySQL releases, completing the LAMP stack
 - 1997: First essay of the 'The Cathedral and the Bazaar' releases
-- 1998: Release of KDE 
+- 1998: Release of KDE  
 - 1998: Open Source Initiative founded by Raymond (Open Source camp invited, not Stallman)
 - 1998: Netscape Navigator open sourced
 - 1998: Microsoft "Halloween Documents" leaked
@@ -82,12 +91,15 @@ The Open Source/Corporate Integration Era:
 - 2018: Microsoft acquires Github for $7.5 billion
 - 2019: IBM acquires Red Hat
 
-
 ## Book Summaries
 
 ***It's telling that most of these books are over 20 years old....***
 
 ### For Fun and Profit: A History of the FOSS Revolution ([Tozzi](http://christozzi.com/), 2017)
+
+#### *Forward*
+
+This book did a really good job at not just giving a summary of the FOSS movement but doing analysis of previous summarizations of FOSS/open source as well as attempting to contextualize many of these figures. It isn't the most in-depth for Linus Torvalds or Richard Stallman but it is benefitted on not zooming in too much on one particular figure; furthermore, it is (semi?.... ok almost a decade old wow) recent so it covers more ground that most articles/books on the subject. It starts off in Bell Labs with Unix, progressing into GNU and the movement tha† Stallman kicked off, then heading into Torvalds' kernel and how the combined GNU/Linux system was adopted by companies and mainstreamed over the coming decades. 
 
 #### Chapter 1: The Path to Revolution Unix and the Origins of Hacker Culture
 
@@ -117,7 +129,7 @@ Linus Torvalds was born in Helsinki, Finland in 1969. He was swedish speaking ki
 
 In 1987, computer scientist Andrew Tanenbaum released Operating Systems: Design and Implementation which discussed operating systems and a unix-like educational and simple OS, MINIX. After Linus purchased the book three years later, he was amazed by MINIX though didn't like the limited functionality (no terminal emulator/remote login, microkernel, or portability/POSIX compliance) and especially the price ($169); in particular, he thought an operating system should be $0 and didn't want financial compensation or donations. His parents, one of them a communist, the other an academic, influenced his software distribution thoughts. 
 
-Therefore, he began to rectify this. He developed an assembly terminal emulator, then shifted towards disk/filesystem drivers which slowly pushed him into doing proper operating system development which occurred around 1991. Lack of academic resources or industry support made things harder for Linus; he needed to ask on the MINIX usenet group about POSIX standards, debugged via die-loops and use MINIX (including GNU) utilities. Tannenbaum disagreed with Linus' work, complaining that it was using a monolithic kernel and that it only worked on a 386 (particularly stinging to Linus as that was the only machine he had). He argued back against the microkernel and for it's portability due to the POSIX compliance in what would later be known as the Torvalds-Tannenbaum debate. 
+Therefore, he began to rectify this. He developed an assembly terminal emulator, then shifted towards disk/filesystem drivers which slowly pushed him into doing proper operating system development which occurred around 1991. Lack of academic resources or industry support made things harder for Linus; he needed to ask on the MINIX usenet group about POSIX standards, debugged via die-loops and use MINIX (including GNU) utilities. Tanenbaum disagreed with Linus' work, complaining that it was using a monolithic kernel and that it only worked on a 386 (particularly stinging to Linus as that was the only machine he had). He argued back against the microkernel and for it's portability due to the POSIX compliance in what would later be known as the Torvalds-Tanenbaum debate. 
 
 From here, contributors began to add to Linux, with page-to-disk (swapping), X Window graphics, and networking. Linus decided to license the project as GPL despite the fanatical community and indifference to free software principles since he did agree that the license encouraged collaboration. Companies such as Red Hat and SUSE S.A began commercializing the project. 
 
@@ -141,7 +153,7 @@ What was the split between the open source and free software movements? The frac
 
 The second major battle came between the entire FOSS community and Microsoft. Raymond's essay "The Cathedral and the Bazaar" helped push executives at Netscape to open source their browser[^netscapeinfo] and this got Microsoft's attention. As revealed in the "Halloween Documents" that were leaked to Eric Raymond, Microsoft began to fear FOSS software and devised a strategy to squash it: "Embrace, Extend and Extinguish"; this involved creating proprietary extensions to existing open standards to create a lock-in (this was done with Internet Explorer with ActiveX and Microsoft Office's proprietary format). They were primarily afraid of FOSS software taking over the server market and to a much lesser extent desktop Linux distros and wanted to employ the EEE strategy.
 
-Microsoft took multiple actions to attempt to stifle FOSS. First, they promoted the "shared source" model to let Microsoft keeps its IP rights while sharing the source to select partners, though this ended up not working out. Second, they backed the SCO Group which filed a lawsuit against IBM and other companies claiming that some of the Unix code was from the System V OS they released; Torvalds and other open source developers thought the company was just spreading fear about Linux rather than having genuine claims of copyright infringement. The lawsuit against Novell failed in 2007 and SCO Group would file for bankruptcy. Third, Microsoft backed a thesis by Kenneth Brown in 2004, "Samizdat: And Other Issues Regarding the 'Source' of Open Source Code", which argued that Torvalds copied directly from the MINIX kernel based on its complexity, criticized open source based on the fact that the origins of the code aren't known for sure, and argued that the GPL license is bad for the economy. The argument of copying was countered directly by Tannenbaum and further criticized by Stallman and Ritchie. 
+Microsoft took multiple actions to attempt to stifle FOSS. First, they promoted the "shared source" model to let Microsoft keeps its IP rights while sharing the source to select partners, though this ended up not working out. Second, they backed the SCO Group which filed a lawsuit against IBM and other companies claiming that some of the Unix code was from the System V OS they released; Torvalds and other open source developers thought the company was just spreading fear about Linux rather than having genuine claims of copyright infringement. The lawsuit against Novell failed in 2007 and SCO Group would file for bankruptcy. Third, Microsoft backed a thesis by Kenneth Brown in 2004, "Samizdat: And Other Issues Regarding the 'Source' of Open Source Code", which argued that Torvalds copied directly from the MINIX kernel based on its complexity, criticized open source based on the fact that the origins of the code aren't known for sure, and argued that the GPL license is bad for the economy. The argument of copying was countered directly by Tanenbaum and further criticized by Stallman and Ritchie. 
 
 The failure by Microsoft to stop open source showed the persistence that FOSS software had through legal precedent and the strong corporate backing. At the same time, the ideas of free software that Stallman highlighted started fading away with minimal backing from companies.
 
@@ -161,43 +173,70 @@ I've been using the word FOSS but really the free software portion isn't relevan
 
 ### Just for Fun: The Story of an Accidental Revolutionary ([Torvalds](https://en.wikipedia.org/wiki/Linus_Torvalds), 2002)
 
+#### Birth of a Nerd
+
+Linus Torvalds was born in 1969 in Finland to two journalists who emigrated from Sweden. He grew up in a dysfunctional family as a odd-looking socially awkward kid who was smart academically and often went to his mom's or dad's place after his parents divorced. In Finland, it's a more quiet culture that prioritizes education (also he points out that its common for homes to have sauna rooms). The first highlight of his life was his morfar (grandfather on mom's side) buying him a Commodore VIC-20 (Linus viewed the computers he received as different highlights for his life). He would write out tons of programs, typing the example programs, then trying to read programs that were in English computer magazines including a morse code program. Linus would often stick himself away in his room with a computer for hours on end, even when his dad wanted him to get a new hobby. When he joined the University of Helsinki, he was one of the only students to major in computers and joined Spektrum, a social club for guys in hard sciences, though he put university on hold temporarily to do military service for 11 months.
+
+#### Birth of an Operating System
+
+A year before he started college in 1988, Linus purchased and upgraded Sinclair QL with extra RAM and used the EEPROM to include his self-written compiler and editor and began to work on writing video game clones (such as pac-man). He then read Tanenbaum's Operating System book which was the catalyst that led Linus to take a C and Unix class and learn more about Unix. He also obtained the limited MINIX teaching OS and he started modifying it to add a terminal emulator (using two threads, one for the display and the other for the keyboard) using the GNU C compiler.
+
+Linus enjoyed being able to create his own world with his own constructed rules, analogizing it to physics. He also enjoyed the ability to get your code to work regardless of what computing environment it was in. After developing the terminal, he used it to log into the university computer to read emails and look at the MINIX news group discussions. However, Linus also wanted to download and upload things which would be quite challenging but, not having a heavy courseload and minimal social obligations, led him to implement filesystem driver functionality, shifting his work into a full operating system. However, to complete it, he worked to add POSIX standards[^posixsunmanual]. He ported bash and worked on reimplementing the syscalls that were needed to make it work. Once this was complete, he was able to compile other programs (like ls and cp). He moved his shell work to a new partition on his drive, Linux. In 1991, he posted again to the comp.os.minix newsgroup,accnouncing that he was beginning work on a new operating system. 
+
+Later, when he attempted to dial back into the internet, he accidentally dialed onto his Minix hard disk, leading him to switch to Linux. At this point, other people began using the OS and for the first time, Linus addressed a German's user request for page-to-disk, which motivated many other users to switch. Despite the growing usage, Linus didn't want compensation (despite his university loans and his mom working). He partly associates his viewpoint based on his work being built off the work of others, needing user feedback to improve his OS, and Finnish culture being much more against greed[^nickeintermission], going as far as to have a not-for-sale copyright license. However, he viewed the GPL license as a brilliant tool and, also somewhat influenced by a speech by Stallman, led to his decision to use the GPL license [^linusgplthoughts]. 
+
+In 1992, Tannebaum wrote a post lamenting the Linux Kernel was using a monolithic approach (saying "among the people who design operating systems, the debate is essentially over. Microkernels have won") and that it wasn't portable. Linus, worried of his social standing in the online community was under threat by Tanenbaum's comments, harshly countered stating that unlike Minix, Linus was freely and right now available (even if a microkernel may theoretically be better), doesn't even do the microkernel design well (with multithreading issues), and that the his adherence to the POSIX API provided portability. 
+
+That same year, he was a teaching assistant for the swedish language CS classes and three years later, he would be promoted to a research assistant which was doing Linux development work. Linus felt Linux become a big deal once the X Window System was ported to Linux, which added graphical capabilites. From a development leadership perspective, he took a laid back approach, allowing maintainers focus on the parts that they were most interested in and letting Linus stay low level. Linux continued to grow online too with the comp.os.linux user group grew to within the top 5 most popular newsgroups. He didn't have much of a life outside of Linux besides university obligations and reading emails, though he didn't mind. In 1993, while a TA for the Intro to to Computer Sciences, he instructed his students for homework to send him an email. Tove sent him a message asking him to a date and Linus agreed; they would later marry.
+
+#### King of the Ball
+
+
+
+#### End Sections (IP/End to Control/Amusement Ride Ahead/Why Open Source/Fame of Fortune/Meaning of Life II)
+
+Earlier in 1993, Linus gave his first public talk at the Netherlands Unix User Group. 
+
 ### Free Software, Free Society ([Stallman](https://www.stallman.org/), 2002)
 
 ### The Cathedral and the Bazaar ([Raymond](https://en.wikipedia.org/wiki/Eric_S._Raymond), 2001)
 
 ### Bonus!: Linus' Master of Science Thesis - [Linux: A Portable Operating System](https://www.cs.helsinki.fi/petri/index_files/linus.pdf) (1997)
 
+#### *Forward*
+
+I didn't need to read this at all lol, but I was curious what I'd get here. Linus is quite verbose when describing the different challenges he faced while writing the kernel but that's to be expected from a masters thesis. There is a mega emphasis on portability and especially using the Linux kernel machine to assist in abstracting the software interface, hardware interface, memory management (separate page tables for code that can be shared and code that's arch dependent), etc. He didn't talk about how he created page-to-disk sadly (or swapping as known today). Also note that Linus did emphasize that a lot of the kernel code (and all the GNU code) came from the outside in the acknowledgements.
+
 #### 0. Intro
 
-The most important goal of the Linux Kernel was portability (both in terms of hardware, working on different CPU architectures, and software, with software being compatible with different operating systems). One of the most important concepts was the Linux kernel virtual machine - it provides two layers: one between the kernel and userspace (exposed at syscalls) and one between the kernel and the hardware (provided via drivers). The rest of the paper sections will go over different design challenges and solutions.
+The most important goal of the Linux Kernel was portability (both in terms of hardware, working on different CPU architectures, and software, being compatible with different operating systems). A mechanism to aid this is the Linux kernel virtual machine - it provides two layers: one between the kernel and userspace (exposed at syscalls) and one between the kernel and the hardware (provided via drivers). The rest of the paper sections will go over different design challenges and solutions.
 
 #### 1. Linux Design/Implementation
 
-Linux doesn't use a microkernel (splitting the kernel into chunks) due to performance issues. Also, as the kernel is open source, instead of relying on one fixed binary, the Linux kernel can be configured to add or remove specific features at compile-time. More design goals will include simplicity, efficiency and of course, compatibility.
+Linux doesn't use a microkernel (splitting the kernel into chunks) due to performance issues. Also, as the kernel is open source, it can be configured to add or remove specific features at compile-time. 
 
 #### 2. Compatibility
 
 The design for achieving compatibility was ensuring UNIX compatibility which limits the userland-kernel interface. 
 
-Linux components included process handling, memory management, a file system, network access, drivers (each divided into its own folder), and the virtual machine implementation. For each separate hardware architecture, inline assembly can map any VM semantics onto the hardware to minimize performance loss.
+The standardized Linux components across architectures include process handling, memory management, a file system, network access, drivers (each divided into its own folder), and the virtual machine implementation. For each separate hardware architecture, inline assembly can map any VM semantics onto the hardware to minimize performance loss.
 
 #### 3. Software Interface Portability
 
-Again, this is constrained by the POSIX interface.
-
-There was also the idea of operating system 'personalities' which was the idea that the same platform may have multiple interface abstractions (besides just POSIX). (As seen on the man page, "Linux supports different execution domains, or personalities, for each process... among other things tell Linux how to map signal numbers into signal actions". While popular in the 90s, the rise of virtualization killed this idea).
+This is constrained by adhering to the POSIX interface [^personalities].
 
 #### 4. Hardware Portability Issues
 
-While a C compiler does provide cross platform compilation, there are a host of issues that come after. First are the issues that come with data. Consistent data sizes are important for networking and file systems so a types header file is required for some platforms. To handle byte alignment (or an object being stored at an address that's a multiple of 8/4/etc.), the kernel will assume alignment and then use a trap handler to handle exceptions. Byte order is handled with functions to convert between big-endian and little-endian.
+While a C compiler does provide cross platform compilation, there are still a host of issues. First are data issues: consistent data sizes are important for networking and file systems so a types header file is required for some platforms. Byte alignment (or an object being stored at an address that's a multiple of 8/4/etc.) is assumed with a trap handler to catch exceptions. Byte order uses functions to convert between big-endian and little-endian.
 
-Memory management must be fast and simple, even without hardware standards. CPUs have a feature known as a Translation Lookaside Buffer (TLB) which shows recent translations of virtual memory to physical memory. Operating system page tables handle translating virtual addresses to physical addresses since processes are given the illusion of a continuous address space and need to have a mechanism to translate the addresses.   Different CPUs have different methods for handling virtual memory (such as using page table trees (or multiple levels of page tables), a hash table, or even no architecture-specified page tables). 
+Memory management must be fast and simple, even without hardware standards. Modern CPUs have a feature known as a Translation Lookaside Buffer (TLB) which shows recent translations of virtual memory to physical memory but the method of handling virtual memory translation varies across the system architecture [^morememorymanagement]. To solve this incongruiety, the Linux kernel uses the kernel vm to split memory management into (at least) two page tables, with one dedicated to the kernel VM and the other to the architecture-specific CPU. The TLB and the page tables must be kept in sync.
 
-The strategy the Linux kernel uses is to use the linux kernel virtul machine as the intermediary. The memory management to the Linux kernel VM is the same across platforms, with architecture-specific code after. This requires page tables of the kernel VM and physical memory and they and the TLB need to be kept in sync. 
+Cache coherency (syncing multiple processor caches) is also required [^instructionvsdatacache]. For multiprocessor handling, atomicity is provided for kernel data structures via kernel locks. Finally, device drivers (which comprimise half of the kernel) provide I/O abstraction though the PCI standard is helping cut down on the work.
 
-Speaking of CPU caches, cache coherency (syncing of multiple processor caches) is also required. Instruction caches are handled by invalidating stale cache entries during memory management while data cache coherency is more complex and not handled with shared shared memory maps. For multiprocessor handling, atomicity is provided for kernel data structures via kernel locks.
+## Interviews with Linus Torvalds
 
-Finally, device drivers (which comprimise half of the kernel) provide I/O abstraction though the PCI standard is helping cut down on the work.
+### *Forward*
+
 
 ## Thoughts
 
@@ -240,6 +279,18 @@ Finally, device drivers (which comprimise half of the kernel) provide I/O abstra
 [^netscapeinfo]: Raymond’s notion of Linus’ Law (more devs minimizes bugs) and the development methodology and analogy he drew of the cathedral and the bazaar was quite novel compared to Brook’s Law. This utilitarian appeal over ideology as well as recognizing previous FOSS work moved Netscape executives to open source their code (1998). Netscape also looked to the community when picking a license (not finding BSD/GPL appropriate) and this led to the Netscape Public License and Mozilla Public License (for code after open sourcing); while FOSS leaders viewed this positively, few developers improved Netscape and the project faltered until 2003 when AOL (owner of Netscape) reduced support for Mozilla; a setback but one the open source community could push through.  
 
 [^ubuntupopularity]: Shuttleworth argues that Ubuntu focus on usability, commercial backing, and willingness to ignore factions of its userbase contributed to its popularity.   
+
+[^personalities]: There was also the idea of operating system 'personalities' which was the idea that the same platform may have multiple interface abstractions (besides just POSIX). (As seen on the man page, "Linux supports different execution domains, or personalities, for each process... among other things tell Linux how to map signal numbers into signal actions". While popular in the 90s, the rise of virtualization killed this idea).
+
+[^morememorymanagement]: Operating system page tables handle translating virtual addresses to physical addresses since processes are given the illusion of a continuous address space and need to have a mechanism to translate the addresses.  Different CPUs have different methods for handling virtual memory (such as using page table trees (or multiple levels of page tables), a hash table, or even no architecture-specified page tables). 
+
+[^instructionvsdatacache]: Instruction caches are handled by invalidating stale cache entries (if there's an update in one CPU or core, the other CPUs or cores marks their cache entries as stale) while data cache coherency is more complex. 
+
+[^posixsunmanual]: While he asked for them in 1991 on the comp.os.minix newsgroup, nobody responded so Linus initially used the SunOS documentation owned by the university. 
+
+[^nickeintermission]: Linus preferred receiving postcards acknowledging his work. Also Nicke, Linus' dad, said that his communist politics led to Linus being teased so Linus wanted to diassociate from his dad's political views, though Tozzi argues that his views did influence Linus Torvalds.
+
+[^linusgplthoughts]: However, Linus states that he is not a GPL-freak and doesn't think all software should be GPLd, but rather should be up to the creator of the software to decide the appropriate license.
 
 ## Other Sources:
 
