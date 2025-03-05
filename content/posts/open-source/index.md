@@ -5,6 +5,8 @@ draft: false
 summary: Reading I did on Linus Torvalds, the FOSS movement and Richard Stallman
 ---
 
+*Photo credit to [Faces of Open Source](https://www.facesofopensource.com/linus-torvalds/)*
+
 # Forward
 
 *If you take nothing else from this post, read [For Fun and Profit: A History of the FOSS Revolution (2017, Tozzi)](https://mitpress.mit.edu/9780262551786/for-fun-and-profit/) and take a look at the timeline and maybe my forwards for the books.*
@@ -43,7 +45,6 @@ Last summer, before writing Feature, I wanted to improve my knowledge of the his
     - [*Forward*](#forward-3)
   - [Thoughts](#thoughts)
   - [Philosophy of Richard Stallman](#philosophy-of-richard-stallman)
-  - [Footnotes](#footnotes)
   - [Other Sources:](#other-sources)
 
 ## Timeline
@@ -121,7 +122,7 @@ This period also marked the beginning when the corporate support of free softwar
 
 There was one wrinkle; by 1990, there still wasn't a kernel. Stallman initally went with the TRIX kernel but switched to CMU's Mach kernel since the TRIX kernel was only written for a Motorola 68000 and Microkernels were considered the future of operating systems but he needed to wait for the AT&T components to be stripped first. A year later, GNU Hurd based on the Mach kernel began development. The "design turned out to be a research project" and requiring cross compatibility didn't help matters. 
 
-GNU was overall successful based on Stallman's leadership (projecting a strong vision of the project, comprimising in areas that mattered, an example being the Library GPL license scaling a back from GPL for the sake of adoption), institutional support, and the legal focus (GPL and Creative Commons). The limited members who participated in the project slowed the growth and the project also didn't focus much on the microcomputers of the 90s. 
+GNU was overall successful based on Stallman's leadership (projecting a strong vision of the project, comprimising in areas that mattered, an example being the Library GPL license scaling a back from GPL for the sake of adoption), institutional support, and the legal focus (GPL and Creative Commons) [^lookandfeel]. The limited members who participated in the project slowed the growth and the project also didn't focus much on the microcomputers of the 90s. 
 
 #### Chapter 3: A Kernel of Hope
 
@@ -181,7 +182,7 @@ Linus Torvalds was born in 1969 in Finland to two journalists who emigrated from
 
 A year before he started college in 1988, Linus purchased and upgraded Sinclair QL with extra RAM and used the EEPROM to include his self-written compiler and editor and began to work on writing video game clones (such as pac-man). He then read Tanenbaum's Operating System book which was the catalyst that led Linus to take a C and Unix class and learn more about Unix. He also obtained the limited MINIX teaching OS and he started modifying it to add a terminal emulator (using two threads, one for the display and the other for the keyboard) using the GNU C compiler.
 
-Linus enjoyed being able to create his own world with his own constructed rules, analogizing it to physics. He also enjoyed the ability to get your code to work regardless of what computing environment it was in. After developing the terminal, he used it to log into the university computer to read emails and look at the MINIX news group discussions. However, Linus also wanted to download and upload things which would be quite challenging but, not having a heavy courseload and minimal social obligations, led him to implement filesystem driver functionality, shifting his work into a full operating system. However, to complete it, he worked to add POSIX standards[^posixsunmanual]. He ported bash and worked on reimplementing the syscalls that were needed to make it work. Once this was complete, he was able to compile other programs (like ls and cp). He moved his shell work to a new partition on his drive, Linux. In 1991, he posted again to the comp.os.minix newsgroup,accnouncing that he was beginning work on a new operating system. 
+Linus enjoyed being able to create his own world with his own constructed rules, analogizing it to physics. He also enjoyed the ability to get your code to work regardless of what computing environment it was in. After developing the terminal, he used it to log into the university computer to read emails and look at the MINIX news group discussions. However, Linus also wanted to download and upload things which would be quite challenging but, not having a heavy courseload and minimal social obligations, led him to implement filesystem driver functionality, shifting his work into a full operating system. However, to complete it, he worked to add POSIX standards[^posixsunmanual]. Ari Lemke, a TA at Helsinki, to set up the FTP directory to host "Linux" which he got by combining "Linus" and "Unix". Linus set up his kernel to boot the bash shell and worked on reimplementing the syscalls that were needed to make it work. Once this was complete, he was able to compile other programs (like ls and cp). He moved his shell work to a new partition on his drive, Linux. In 1991, he posted again to the comp.os.minix newsgroup,accnouncing that he was beginning work on a new operating system. 
 
 Later, when he attempted to dial back into the internet, he accidentally dialed onto his Minix hard disk, leading him to switch to Linux. At this point, other people began using the OS and for the first time, Linus addressed a German's user request for page-to-disk, which motivated many other users to switch. Despite the growing usage, Linus didn't want compensation (despite his university loans and his mom working). He partly associates his viewpoint based on his work being built off the work of others, needing user feedback to improve his OS, and Finnish culture being much more against greed[^nickeintermission], going as far as to have a not-for-sale copyright license. However, he viewed the GPL license as a brilliant tool and, also somewhat influenced by a speech by Stallman, led to his decision to use the GPL license [^linusgplthoughts]. 
 
@@ -191,11 +192,17 @@ That same year, he was a teaching assistant for the swedish language CS classes 
 
 #### King of the Ball
 
+Version 1.0 of Linux releases in 1994 and Linus gives his first televised talk at the University of Helsinki with his parents and Tove in the audience[^linusfirsttalk]. The growing interest in Linux also gets more corporate invitations: Novell, a networking company, invites him to California to talk about their desktop which was the first time Linus traveled to to the states. A year later, he spoke at DECUS and got a DEC Alpha machine (RISC-based) which eh used to port Linux to a new architecture.
 
+In 1995, a trademark troll from Bostom trademarked Linux and went around to Linux companies asking for a part of their revenue. While Linus wanted the Linux name to be public domain, his lawyers said it wasn't feasible so Linus ended up holding the trademark. That year, he wanted to intern at Intel but had visa issues so he continued to stay in Helsinki.
+
+
+In 1996, Linus joined Transmeta, an x86 CPU company, despite worries from the Linux community about the company being funded by Microsoft. He would late . He would have three daughters during this time period as well. 
+
+The origins of the penguin design are disputed. Tove says she inspired Linus whereas Linus says he got the idea from two high ranking Linux developers. Regardless, Tux was support to look cheerful (drank beer and had great sex) and distinctive. Larry Ewing drew the mascot.
 
 #### End Sections (IP/End to Control/Amusement Ride Ahead/Why Open Source/Fame of Fortune/Meaning of Life II)
 
-Earlier in 1993, Linus gave his first public talk at the Netherlands Unix User Group. 
 
 ### Free Software, Free Society ([Stallman](https://www.stallman.org/), 2002)
 
@@ -251,7 +258,10 @@ Cache coherency (syncing multiple processor caches) is also required [^instructi
 - GNU/Linux debate \- his values are right but there's an advocacy limit before people want to tune you out and RMS has not found his limit  
 - Epstein Controversy: Got back on the open source board in 2021, but furthered decline of his influence.
 
-## Footnotes
+## Other Sources:
+
+- [The story behind Open Source Software, Saumo Pal](https://www.btw.so/blog/history-of-open-source-software/)
+- [StackOverflow - What are operating-system personalities?](https://stackoverflow.com/questions/52136857/what-are-operating-system-personalities)
 
 [^manpages]: The first man pages were created in 1971. 
 
@@ -261,10 +271,7 @@ Cache coherency (syncing multiple processor caches) is also required [^instructi
 
 [^newsgroups]: Looking at TechTarget, Usenet allowed researchers/academics to share information/ideas via an online discussion forum - it used the Network News Transfer Protocol (NNTP). 
 
-[^lookandfeed]: Battle for ‘Look and Feel’, software patents which could protect the idea/concept behind software, which copyright law didn’t cover  
-- 1987: SoftKlone won legal battle over look and feel of its programs  
-- 1989: Stallman founded League for Programming Freedom, separate org to combat above issue (GNU promoted it)  
-- 1988-95: Apple filed (and eventually lost) lawsuits against HP/Microsoft about look and feel   
+[^lookandfeel]: There was a battle for ‘Look and Feel’ where software patents which could protect the idea/concept behind software. In 1989, Stallman founded League for Programming Freedom, a separate organization to combat above issue (GNU promoted it)  and by in 1995: Apple lost lawsuits against HP/Microsoft about look and feel.
 
 [^bsdinfo]: At UC Berkeley, Kevin Bostic led a team to separate BSD code from AT&T Unix to make a free software version. In 1989 and 1991, networking code would be added to BSD but a year later, Unix Systems Labs (the company which took over Unix from AT&T) sued Berkeley System Design (which was founded by Berkeley students part of the Computer Systems Research Group, or CSRG). After AT&T bought 20% of shares in Sun Microsystems in 1987 and collaborated to create Unix System V, a consortion of companies afraid of not being part of the standardization process came together to form the Open Source Foundation, a body which focused Unix standardization (but not FOSS). This body didn't materialize much.
 
@@ -292,7 +299,4 @@ Cache coherency (syncing multiple processor caches) is also required [^instructi
 
 [^linusgplthoughts]: However, Linus states that he is not a GPL-freak and doesn't think all software should be GPLd, but rather should be up to the creator of the software to decide the appropriate license.
 
-## Other Sources:
-
-- [The story behind Open Source Software, Saumo Pal](https://www.btw.so/blog/history-of-open-source-software/)
-- [StackOverflow - What are operating-system personalities?](https://stackoverflow.com/questions/52136857/what-are-operating-system-personalities)
+[^linusfirsttalk]: It was not his first talk; in 1993, Linus gave his first public talk at the Netherlands Unix User Group. 
