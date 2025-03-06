@@ -1,5 +1,5 @@
 ---
-title: 'Notes on Free Software and Open Source'
+title: 'Research on the Free Software and Open Source Movement'
 date: 2025-02-25T16:04:00-04:00
 draft: false
 summary: Reading I did on Linus Torvalds, the FOSS movement and Richard Stallman
@@ -31,7 +31,7 @@ Last summer, before writing Feature, I wanted to improve my knowledge of the his
       - [Birth of a Nerd](#birth-of-a-nerd)
       - [Birth of an Operating System](#birth-of-an-operating-system)
       - [King of the Ball](#king-of-the-ball)
-      - [End Sections (IP/End to Control/Amusement Ride Ahead/Why Open Source/Fame of Fortune/Meaning of Life II)](#end-sections-ipend-to-controlamusement-ride-aheadwhy-open-sourcefame-of-fortunemeaning-of-life-ii)
+      - [End Sections](#end-sections)
     - [Free Software, Free Society (Stallman, 2002)](#free-software-free-society-stallman-2002)
     - [The Cathedral and the Bazaar (Raymond, 2001)](#the-cathedral-and-the-bazaar-raymond-2001)
     - [Bonus!: Linus' Master of Science Thesis - Linux: A Portable Operating System (1997)](#bonus-linus-master-of-science-thesis---linux-a-portable-operating-system-1997)
@@ -176,7 +176,7 @@ I've been using the word FOSS but really the free software portion isn't relevan
 
 #### Birth of a Nerd
 
-Linus Torvalds was born in 1969 in Finland to two journalists who emigrated from Sweden. He grew up in a dysfunctional family as a odd-looking socially awkward kid who was smart academically and often went to his mom's or dad's place after his parents divorced. In Finland, it's a more quiet culture that prioritizes education (also he points out that its common for homes to have sauna rooms). The first highlight of his life was his morfar (grandfather on mom's side) buying him a Commodore VIC-20 (Linus viewed the computers he received as different highlights for his life). He would write out tons of programs, typing the example programs, then trying to read programs that were in English computer magazines including a morse code program. Linus would often stick himself away in his room with a computer for hours on end, even when his dad wanted him to get a new hobby. When he joined the University of Helsinki, he was one of the only students to major in computers and joined Spektrum, a social club for guys in hard sciences, though he put university on hold temporarily to do military service for 11 months.
+Linus Torvalds was born in 1969 in Finland to two journalists who emigrated from Sweden. He grew up in a dysfunctional family as a odd-looking socially awkward kid who was smart academically and often went to his mom's or dad's place after his parents divorced. In Finland[^finlandball], it's a more quiet culture that prioritizes education (also he points out that its common for homes to have sauna rooms). The first highlight of his life was his morfar (grandfather on mom's side) buying him a Commodore VIC-20 (Linus viewed the computers he received as different highlights for his life). He would write out tons of programs, typing the example programs, then trying to read programs that were in English computer magazines including a morse code program. Linus would often stick himself away in his room with a computer for hours on end, even when his dad wanted him to get a new hobby. When he joined the University of Helsinki, he was one of the only students to major in computers and joined Spektrum, a social club for guys in hard sciences, though he put university on hold temporarily to do military service for 11 months.
 
 #### Birth of an Operating System
 
@@ -190,19 +190,25 @@ In 1992, Tannebaum wrote a post lamenting the Linux Kernel was using a monolithi
 
 That same year, he was a teaching assistant for the swedish language CS classes and three years later, he would be promoted to a research assistant which was doing Linux development work. Linus felt Linux become a big deal once the X Window System was ported to Linux, which added graphical capabilites. From a development leadership perspective, he took a laid back approach, allowing maintainers focus on the parts that they were most interested in and letting Linus stay low level. Linux continued to grow online too with the comp.os.linux user group grew to within the top 5 most popular newsgroups. He didn't have much of a life outside of Linux besides university obligations and reading emails, though he didn't mind. In 1993, while a TA for the Intro to to Computer Sciences, he instructed his students for homework to send him an email. Tove sent him a message asking him to a date and Linus agreed; they would later marry.
 
+Version 1.0 of Linux releases in 1994 and Linus gives his first televised talk at the University of Helsinki with his parents and Tove in the audience[^linusfirsttalk]. 
+
 #### King of the Ball
 
-Version 1.0 of Linux releases in 1994 and Linus gives his first televised talk at the University of Helsinki with his parents and Tove in the audience[^linusfirsttalk]. The growing interest in Linux also gets more corporate invitations: Novell, a networking company, invites him to California to talk about their desktop which was the first time Linus traveled to to the states. A year later, he spoke at DECUS and got a DEC Alpha machine (RISC-based) which eh used to port Linux to a new architecture.
+The growing interest in Linux gets him more corporate invitations: Novell, a networking company, invites him to California to talk about their desktop which was the first time Linus traveled to the states. A year later, he spoke at DECUS and got a DEC Alpha machine (RISC-based) which he used to port Linux to a new architecture. In 2000, he got to meet Steve Jobs (co-founder of Apple) and Avie Tevanian (principle designer/engineer on Mach microkernel while at CMU which served as the foundation of NeXTSTEP and macOS). He already disliked the kernel due to poor performance and large complexity. He was confounded that Steve was trying to sell him on supporting Apple with its kernel being open source when the rest of the OS was not and emphasizing the want for macOS to take more marketshare from Windows, which Linus didn't care about either. 
 
-In 1995, a trademark troll from Bostom trademarked Linux and went around to Linux companies asking for a part of their revenue. While Linus wanted the Linux name to be public domain, his lawyers said it wasn't feasible so Linus ended up holding the trademark. That year, he wanted to intern at Intel but had visa issues so he continued to stay in Helsinki.
+Despite continuing to lead development of Linux, Linus still worked for about 6 years in industry[^linusintel]. In 1996, Linus joined Transmeta, an x86 CPU company, despite worries from the Linux community about the company being funded by Microsoft. The year after, he finished his master's thesis and, during the same weekend, would have his first daughter (he would have two more over the coming months). In 1999, Red Hat and VA Linux IPOd and the shares in these companies made Linus a millionare.
 
+Linus became the poster boy of Linux[^tuxorigin] and felt discontent with the portrayals the media had of Linux vs. Microsoft or the idealists vs. the pragmatists as oversimplified. He believed in commercial interests for Linux providing an alternative to Windows and was also comprimising when it came to Transmeta, working on proprietary software there, without beliving that he'd sellout. He dislikes the idea of people preaching or imposing their world views on others and dislike how dogmatic free software advocates can be such as Stallman complaining about software not using the GPL license. Linus' view is straightforward: it provides a development philosphy that can lead to good technology and prevents hoarding from competitors. Reflecting on the development, a part of Linus feels that he would have been overwhelmed early on if he thought through the logistical challenges of supporting all his users, though he highlights his insulation from the actual spread of Linux, which was happening across IT departments. 
 
-In 1996, Linus joined Transmeta, an x86 CPU company, despite worries from the Linux community about the company being funded by Microsoft. He would late . He would have three daughters during this time period as well. 
+#### End Sections 
 
-The origins of the penguin design are disputed. Tove says she inspired Linus whereas Linus says he got the idea from two high ranking Linux developers. Regardless, Tux was support to look cheerful (drank beer and had great sex) and distinctive. Larry Ewing drew the mascot.
+(*These sections halt the auto/biography and instead Linus muses on different subjects. I'll be more selective on what I include and I'll speak from also my perspective as relevant.*)
 
-#### End Sections (IP/End to Control/Amusement Ride Ahead/Why Open Source/Fame of Fortune/Meaning of Life II)
+The Amusement Ride Ahead: Linus makes a couple of when predictions on the future of computing and got a lot of hits. He predicted correctly the operating system will not be a big deal (which browsers helped with), that phones will take over as a hub for other devices (partly true), and they'll all be running Linux (Android did win most of the marketshare). His most incorrect prediction but also most fascinating was that he thought Sony would trojan-horse the PlayStation 2 into being a general computing device that would serve as a hub for other devices; that prediction is wrong but [Sony](https://en.wikipedia.org/wiki/Linux_for_PlayStation_2) [tried](https://en.wikipedia.org/wiki/OtherOS).
 
+Why Open Source Makes Sense: Linus points out that he often has external discussions with businesses since they find that open sourcing their products may be risky (since they are giving up control). With that said, he does try to maintain his neutrality.
+
+The Meaning of Life 2: I didn't include the first Meaning of Life section since it's repeated. Linus argues that people are motivated by survival, then social motivation, then entertainment and then says that Linux plays a role in his (and for community members) social motivation and entertainment.
 
 ### Free Software, Free Society ([Stallman](https://www.stallman.org/), 2002)
 
@@ -262,6 +268,7 @@ Cache coherency (syncing multiple processor caches) is also required [^instructi
 
 - [The story behind Open Source Software, Saumo Pal](https://www.btw.so/blog/history-of-open-source-software/)
 - [StackOverflow - What are operating-system personalities?](https://stackoverflow.com/questions/52136857/what-are-operating-system-personalities)
+-  [Wikipedia - Avie Tevanian](https://en.wikipedia.org/wiki/Avie_Tevanian)
 
 [^manpages]: The first man pages were created in 1971. 
 
@@ -300,3 +307,9 @@ Cache coherency (syncing multiple processor caches) is also required [^instructi
 [^linusgplthoughts]: However, Linus states that he is not a GPL-freak and doesn't think all software should be GPLd, but rather should be up to the creator of the software to decide the appropriate license.
 
 [^linusfirsttalk]: It was not his first talk; in 1993, Linus gave his first public talk at the Netherlands Unix User Group. 
+
+[^tuxorigin]: The origins of the penguin design are disputed. Tove says she inspired Linus whereas Linus says he got the idea from two high ranking Linux developers. Regardless, Tux was support to look cheerful (Torvalds sees the cheeriness as Tux drinking beer and having great sex) and distinctive. Larry Ewing drew the mascot.
+
+[^linusintel]: He wanted to intern at Intel but had visa issues so he continued to stay in Helsinki.
+
+[^finlandball]: Linus was later invited to Finland's "President's Ball" (or Independence Day Reception).
