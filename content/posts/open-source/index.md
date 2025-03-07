@@ -40,6 +40,8 @@ Last summer, before writing Feature, I wanted to improve my knowledge of the his
       - [Part 3: Copyright and Injustice](#part-3-copyright-and-injustice)
       - [Part 4: Software Patents: Dangers to Programmers](#part-4-software-patents-dangers-to-programmers)
       - [Part 5: Free Software Licensing](#part-5-free-software-licensing)
+      - [Part 6: Traps and Challenges](#part-6-traps-and-challenges)
+      - [Part 7: Value Community and Your Freedom](#part-7-value-community-and-your-freedom)
     - [The Cathedral and the Bazaar (Raymond, 2001)](#the-cathedral-and-the-bazaar-raymond-2001)
     - [Bonus!: Linus' Master of Science Thesis - Linux: A Portable Operating System (1997)](#bonus-linus-master-of-science-thesis---linux-a-portable-operating-system-1997)
       - [*Forward*](#forward-4)
@@ -227,6 +229,8 @@ The Meaning of Life 2: I didn't include the first Meaning of Life section since 
 
 #### *Forward*
 
+This was a drag. I was initially captivated by the way that Stallman laid out his ethical principles for software and how companies promoted proprietary software that restricted the user's freedoms; it was a breath of fresh air from the (mostly) development focus I read from "Just for Fun". But then it keeps going. And going. And keeps repeating the same points over and over, almost as if I'm listening to a proselytizer. It's just too much content and tries to address too many topics at once, with little effort to segment the topics properly. This book was constructed from many essays Richard Stallman wrote but it really should have been rewritten and edited to be more concise.
+
 #### Part 1: GNU Project/Free Software 
 
 Free Software Overview:
@@ -265,11 +269,25 @@ Stallman argues for 10 years of copyright (which is how long a work lasts), thou
 
 *The rest of the sections were skimmed through so I have fewer notes on them.*
 
-Patents is a monopoly on an idea that lasts around 20 years and software patents (which cover program algorithms, file formats) shouldn't exist, conflicting with the ideas of copyright by locking in functional ideas. According to a 2004 study \- Linux itself possibly violates 283 patents
+Patents are a monopoly on an idea that lasts around 20 years and software patents (which cover program algorithms, file formats) shouldn't exist, denying users the freedom to use their computers/software as they wish. According to a 2004 study \- Linux itself possibly violates 283 patents
 
 #### Part 5: Free Software Licensing
 
+The GPL license was created in 1989 to keep derivatives of software free and allow universal access to source code. Version 2 (released in 1991) was created with software patents in mind, explicitly writing that if the parties are subject to other legal agreements, the licensee is unable to distribute their software. The LGPL license was created for the GNU C library to allow it to be linked to other software if the library itself was made available. Version 3 (released in 2007) was created to address the issue of Tivoization (where hardware vendors would prevent users from inserting modified versions of the free software), provide restriction adding for compatibility with other free licenses and strengthening the patent requirements.
 
+An interesting business model that comes up is selling exceptions of their software; in other words, a company provides a free version of their software but sells their software under a less restrictive license for companies to use.
+
+#### Part 6: Traps and Challenges
+
+*This section highlights a couple of the challenges that companies/users are going through with free software; these parts relate to JavaScript and gaming on Linux. There were more but they were either repeats of above or weren't too interesting to me to note down. I also don't agree with some of what RMS is saying but still wrote it down here.*
+
+Most large JS programs nowadays are obfuscated/compacted and the real source isn’t provided and would not be considered free. To define nontrivial JavaScript, it would be any script that loads an external script, makes an AJAX request, uses dynamic constructs, or obfuscates its code (ex. non string literals with Obj.create()).
+
+Valve is supporting Steam on Linux which is good in boosting adoption of GNU/Linux but bad in terms of having users use nonfree software. You can still have commercial games and the art doesn’t need to be free, but proprietary games should be avoided. 
+
+#### Part 7: Value Community and Your Freedom
+
+While compromise is important (ex. patent sections of GPLv3 or LGPL), the values of freedom should not be forgotten and including nonfree software in GNU/Linux (such as Flash) is contrary to the goals of the free software movement. Advocacy of free software is necessary to push people off of proprietary software.
 
 ### The Cathedral and the Bazaar ([Raymond](https://en.wikipedia.org/wiki/Eric_S._Raymond), 2001)
 
