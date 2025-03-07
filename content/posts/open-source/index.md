@@ -43,15 +43,17 @@ Last summer, before writing Feature, I wanted to improve my knowledge of the his
       - [Part 6: Traps and Challenges](#part-6-traps-and-challenges)
       - [Part 7: Value Community and Your Freedom](#part-7-value-community-and-your-freedom)
     - [The Cathedral and the Bazaar (Raymond, 2001)](#the-cathedral-and-the-bazaar-raymond-2001)
+      - [Forward](#forward-4)
+      - [A Brief History of Hackerdom](#a-brief-history-of-hackerdom)
+      - [The Cathedral and the Bazaar](#the-cathedral-and-the-bazaar)
+      - [Homesteading the Noosphere](#homesteading-the-noosphere)
     - [Bonus!: Linus' Master of Science Thesis - Linux: A Portable Operating System (1997)](#bonus-linus-master-of-science-thesis---linux-a-portable-operating-system-1997)
-      - [*Forward*](#forward-4)
+      - [*Forward*](#forward-5)
       - [0. Intro](#0-intro)
       - [1. Linux Design/Implementation](#1-linux-designimplementation)
       - [2. Compatibility](#2-compatibility)
       - [3. Software Interface Portability](#3-software-interface-portability)
       - [4. Hardware Portability Issues](#4-hardware-portability-issues)
-  - [Interviews with Linus Torvalds](#interviews-with-linus-torvalds)
-    - [*Forward*](#forward-5)
   - [Thoughts](#thoughts)
   - [Philosophy of Richard Stallman](#philosophy-of-richard-stallman)
   - [Other Sources:](#other-sources)
@@ -61,6 +63,7 @@ Last summer, before writing Feature, I wanted to improve my knowledge of the his
 The Research/Pre-Microcomputer Era:
 
 - 1964: Initial development of Multics, a time-sharing OS from MIT, General Electric, and Bell Labs
+- 1969: Department of Defense creates ARPAnet
 - 1969: Ken Thompson and Dennis Ritchie begin developing Unix to replace Multics
 - 1973: Unix is rewritten in the C programming language
 - 1978: First release of BSD, a Unix alternative
@@ -291,6 +294,67 @@ While compromise is important (ex. patent sections of GPLv3 or LGPL), the values
 
 ### The Cathedral and the Bazaar ([Raymond](https://en.wikipedia.org/wiki/Eric_S._Raymond), 2001)
 
+#### Forward
+
+
+
+#### A Brief History of Hackerdom
+
+From 1945 to 1970ish, there was a culture of scientific computing, often with physicists or engineers. The early hacker culture started in 1961 when MIT got the DEC PDP-1 and it became a favorite for the Tech Railroad Club, where members would write programs; these people would form the MIT AI Lab. In 1969, ARPAnet, an experiment by DOD, would connect universities, labs, and defense contractors together.
+
+With the release of the PDP-10 (1971), MIT created an ITS (Incompatible Timesharing System), a time shared operating system (which gives each user a small time slice to use the operating system) for their own software instead of using DEC's, which Raymond points to as kickstarting the culture that led to Emacs and GNU. In 1969, Ken Thompson made Unix at Bell Labs after working on ill-fabled Multics time sharing OS; Dennis Ritchie made C for Unix and in 1978, unix was rewritten in C. Unix was portable, easy to use, and included networking features, UUCP, that allowed remote execution of commands and transfers of files/emails/usenet (distributed discussion system). The latter led to usenet bulletin boards.
+
+In the 1980s, the microcomputer communities took off. DEC stopping work on the PDP-10, killing ITS and Stallman started his Unix replacement and the FSF. The debate became Berkeley (BSD) Unix vs the proprietary AT&T Unix. By the beginning of the 1990s, MS-DOS and Mac hackers separate from Unix, commercial Unix was failing with high prices, and FSF failing to build out Hurd. In 1991 though, Linus Torvalds starts Linux kernel, notably avoids the cathedral method of a small tight-knit group of devs (BSD, GNU), but instead adopting the bazaar method of using many volunteers across internet. This method for developing Linux synergized Growth of ISPs and invention of world wide web.
+
+#### The Cathedral and the Bazaar
+
+Eric Raymond originally thought development would be cathedral-like, carefully constructed by specific people but after he saw Linux, he realized the bazaar-like approach, with different ideas/agendas coalescing into a kernel. Now he connects it to Fetchmail, an open source mail retrieval program he wrote, laying out lessons for creating good open source software:
+
+- 1\) All good software comes by scratching a developer’s personal itch  
+  - There is a higher quality standard.
+- 2\) Good programmers know what to write. Great ones know what to rewrite (and reuse)  
+  - Eric added onto fetchpop instead of writing a new POP client.
+- 3\) Plan to throw one away; You Will, Anyhow  
+  - Eric switched to more mature client popclient and was ready to start over. 
+- 4\) If you have the right attitude, interesting problems will find you  
+  - Carl Harris lost interest in maintenance so handed the project over to Eric.
+- 5\) When you lose interest in a program, your last duty is to hand it off to a competent successor  
+- 6\) Treating your users as co-developers is your least-hassle route to rapid code improvement and effective debugging  
+  - With the source, users can be hackers and this is how Linux innovated via its development philosophy more than the kernel itself.
+- 7\) Release Early, Release Often, And Listen to Your Customers  
+  - Linus incorporated user-feedback and would release sometimes more than once a day, leveraging collaborators. Seeing constant improvements/changes will get the users' egos satisfied/curiosity driven.
+- 8\) Given a large enough beta-tester and co-developer base, almost every problem will be characterized quickly and the fix obvious to someone. In other words, “*Given enough eyeballs, all bugs are shallow*” - Linus’ Law.
+  - Both parts (finding and fixing the problem) happen rapidly.
+- 9\) Smart data structures and dumb code works a lot better than the other way around  
+- 10\) If you treat beta testers as if they're your most valuable resource, they will respond by becoming your most valuable resource.
+- 11\) The next best thing from good ideas is recognizing good ideas from your users. Sometimes the latter is better.  
+  - A user sent idea to use SMTP port for local mail delivery agent.
+- 12\) Often the most striking and innovating solutions come from realizing your concept of the problem was wrong 
+  - Eric ended up removing all mail delivery except for SMTP.
+- 13\) Perfection (in design) is achieved not when there is nothing more to add but when there’s nothing to take away
+- 14\) Good tool is intendedly useful, a great tool is unintendedly useful too  
+- 15\) For gateway software, don’t modify/delete data stream info unless requested by the user  
+- 16\) Syntactic sugar can be good for simple non-turing languages  
+- 17\) Don’t do security by obscurity
+- 18\) To solve an interesting problem, find a problem interesting to you  
+- 19\) Provided development coordinator has communications \>= internet and leads without coercion, more people is better  
+
+Software product management in open source is self-organizing, self-motivated with thorough self-review via personal enjoyment which beats standard corporate projects. Open source can also maintain sustained development for one goal similar to proprietary software. Multiple factors facilitated the bazaar style of development: the growth of cheap internet to remove access barrier and connecting selfish ends of hackers (ego) to  the difficult ends of cooperation.
+
+#### Homesteading the Noosphere
+
+*This essay is a social analysis of open source communities.*
+
+Open source culture influenced by zealotry (commitment to method itself) and commercial hostility (strongly against supporting corporations). The FSF exerted that cultural energy with its zealousness and anti-commercial sentiments (though RMS denies second charge). The pragmatists work/develop open source tools but also use commercial software, only being moderately anti-commercial (mainly against tech giants) and don't buy into everything the FSF says. Linus represents the 'pragmatists', looking favorably on commercial linux distros  
+
+The meaning of ‘ownership’ for an open source software is the person who the community recognizes as the one with right to distribute modified versions. A project is acquired when founding a new one, transferring an existing project, or picking up a deserted project. These practices have been consistently followed, encouraging public accountability/retaining commit history. 
+
+Gift culture means that social status based on giving away compared to exchange culture (the free market) or a command hierarchy (a family, government, etc.). ‘Hackers’ fall under this with them gathering prestige and cooperation based on their work. Good gift qualities include extending the ‘noosphere’ rather than duplicating work, commit to hard/boring work (debugging, docs), and extending used features over creating novel unused features. Despite relying on ego for building, there is a taboo against ego-driven behavior, with a culture of humility instead (constrasting this with the flamboyant 'warez' community). There is also a emphasis on meritocracy and creators (ex. Torvalds, Larry Wall) don’t want a cult of personality.
+
+In terms of project structures (characterized as lockean property where individuals have claims to property from a community to minimize friction/maximize cooperation), the simplest is one maintainer, the second is benevolent-dictator with maintainers, and the last is a voting committee (ex. Apache).
+
+*I didn't finish this book so my notes stop here.*
+
 ### Bonus!: Linus' Master of Science Thesis - [Linux: A Portable Operating System](https://www.cs.helsinki.fi/petri/index_files/linus.pdf) (1997)
 
 #### *Forward*
@@ -322,11 +386,6 @@ While a C compiler does provide cross platform compilation, there are still a ho
 Memory management must be fast and simple, even without hardware standards. Modern CPUs have a feature known as a Translation Lookaside Buffer (TLB) which shows recent translations of virtual memory to physical memory but the method of handling virtual memory translation varies across the system architecture [^morememorymanagement]. To solve this incongruity, the Linux kernel uses the kernel vm to split memory management into (at least) two page tables, with one dedicated to the kernel VM and the other to the architecture-specific CPU. The TLB and the page tables must be kept in sync.
 
 Cache coherency (syncing multiple processor caches) is also required [^instructionvsdatacache]. For multiprocessor handling, atomicity is provided for kernel data structures via kernel locks. Finally, device drivers (which comprise half of the kernel) provide I/O abstraction though the PCI standard is helping cut down on the work.
-
-## Interviews with Linus Torvalds
-
-### *Forward*
-
 
 ## Thoughts
 
