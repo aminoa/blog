@@ -1,5 +1,5 @@
 ---
-title: 'Research on the Free Software and Open Source Movement'
+title: 'Reading on the Free Software and Open Source Movement'
 date: 2025-02-25T16:04:00-04:00
 draft: false
 summary: Reading I did on Linus Torvalds, the FOSS movement and Richard Stallman
@@ -28,21 +28,28 @@ Last summer, before writing Feature, I wanted to improve my knowledge of the his
       - [Chapter 5: The FOSS Revolutionary Wars](#chapter-5-the-foss-revolutionary-wars)
       - [Chapter 6: Ending the FOSS Revolution?](#chapter-6-ending-the-foss-revolution)
     - [Just for Fun: The Story of an Accidental Revolutionary (Torvalds, 2002)](#just-for-fun-the-story-of-an-accidental-revolutionary-torvalds-2002)
+      - [*Forward*](#forward-2)
       - [Birth of a Nerd](#birth-of-a-nerd)
       - [Birth of an Operating System](#birth-of-an-operating-system)
       - [King of the Ball](#king-of-the-ball)
       - [End Sections](#end-sections)
     - [Free Software, Free Society (Stallman, 2002)](#free-software-free-society-stallman-2002)
+      - [*Forward*](#forward-3)
+      - [Part 1: GNU Project/Free Software](#part-1-gnu-projectfree-software)
+      - [Part 2: What's in a Name?](#part-2-whats-in-a-name)
+      - [Part 3: Copyright and Injustice](#part-3-copyright-and-injustice)
+      - [Part 4: Software Patents: Dangers to Programmers](#part-4-software-patents-dangers-to-programmers)
+      - [Part 5: Free Software Licensing](#part-5-free-software-licensing)
     - [The Cathedral and the Bazaar (Raymond, 2001)](#the-cathedral-and-the-bazaar-raymond-2001)
     - [Bonus!: Linus' Master of Science Thesis - Linux: A Portable Operating System (1997)](#bonus-linus-master-of-science-thesis---linux-a-portable-operating-system-1997)
-      - [*Forward*](#forward-2)
+      - [*Forward*](#forward-4)
       - [0. Intro](#0-intro)
       - [1. Linux Design/Implementation](#1-linux-designimplementation)
       - [2. Compatibility](#2-compatibility)
       - [3. Software Interface Portability](#3-software-interface-portability)
       - [4. Hardware Portability Issues](#4-hardware-portability-issues)
   - [Interviews with Linus Torvalds](#interviews-with-linus-torvalds)
-    - [*Forward*](#forward-3)
+    - [*Forward*](#forward-5)
   - [Thoughts](#thoughts)
   - [Philosophy of Richard Stallman](#philosophy-of-richard-stallman)
   - [Other Sources:](#other-sources)
@@ -55,12 +62,14 @@ The Research/Pre-Microcomputer Era:
 - 1969: Ken Thompson and Dennis Ritchie begin developing Unix to replace Multics
 - 1973: Unix is rewritten in the C programming language
 - 1978: First release of BSD, a Unix alternative
+- 1981: Symbolics hires members from the MIT AI Lab, decline of FS movement
 
 The GNU Era:
 
 - 1983: Richard Stallman launches the GNU project
 - 1984: X Window development starts (graphical backend) 
 - 1985: Release of Emacs, the first GNU project
+- 1985: Stallman starts the Free Software Foundation
 - 1989: Launch of GPLv1 license
 - 1990: Tim Berners-Lee created the World Wide Web
 - 1991: Linus Torvalds starts the Linux Kernel
@@ -174,6 +183,10 @@ I've been using the word FOSS but really the free software portion isn't relevan
 
 ### Just for Fun: The Story of an Accidental Revolutionary ([Torvalds](https://en.wikipedia.org/wiki/Linus_Torvalds), 2002)
 
+#### *Forward*
+
+You get to see inside Linus' mind on many of the events that are covered and it was contrary to my preconceptions of him; instead of being a practical minded open source advocate, he's an engineer fascinated with the craft who likes to give back and provide the infrastructure for greater projects; I was initially slightly disappointed when I found that he minimally explored open source ideas from an ethical point of view (he did talk about it a little, mentioning how it can prevent hoarding). With that being said, I realize that free software focuses more on that rather than open source. I did appreciate him talking more about his personal life (upbringing, finding a house, many houses in Finland have saunas, his parents/sister, etc). One more caveat: the book dates itself, especially towards the end but from what I've read from him, I don't think he's radically changed his mind on most topics here.
+
 #### Birth of a Nerd
 
 Linus Torvalds was born in 1969 in Finland to two journalists who emigrated from Sweden. He grew up in a dysfunctional family as a odd-looking socially awkward kid who was smart academically and often went to his mom's or dad's place after his parents divorced. In Finland[^finlandball], it's a more quiet culture that prioritizes education (also he points out that its common for homes to have sauna rooms). The first highlight of his life was his morfar (grandfather on mom's side) buying him a Commodore VIC-20 (Linus viewed the computers he received as different highlights for his life). He would write out tons of programs, typing the example programs, then trying to read programs that were in English computer magazines including a morse code program. Linus would often stick himself away in his room with a computer for hours on end, even when his dad wanted him to get a new hobby. When he joined the University of Helsinki, he was one of the only students to major in computers and joined Spektrum, a social club for guys in hard sciences, though he put university on hold temporarily to do military service for 11 months.
@@ -212,6 +225,52 @@ The Meaning of Life 2: I didn't include the first Meaning of Life section since 
 
 ### Free Software, Free Society ([Stallman](https://www.stallman.org/), 2002)
 
+#### *Forward*
+
+#### Part 1: GNU Project/Free Software 
+
+Free Software Overview:
+
+"Free software" is defined as the freedoms to run, study, redistribute copies and redistribute modified versions - the user controls the program rather than the program controlling the user. You should be able to run the modified software in place of the original software and there should be few limits on usage or modification. Despite the name, you can still charge for free software (and provide prebuilt binaries and the source code). In fact, it's important as it brings in development funds[^sourcepricelimit]. 
+
+The "free" refers to the freedoms the user has (unlike "open source"). The software can be subject to distribution rules (ex. requiring an alternate form of distribution[^deltaappstore] as long as it doesn't substantially limit your freedom) or be subject to government export regulations. While not necessary, it is good for the software (such as GNU/Linux distros) to push users and prioritize interoperability with other free software. On the low-level software side, while the BIOS should be free, past that it's excusable since modern computer firmware below that isn't open. Free hardware isn't possible as it isn't feasible for a user to apply modified circuit/chip designs to their own machine. 
+
+A Brief History of the GNU Project:
+
+Back in 1971, the MIT AI Lab hackers wrote software for the PDP-11 but a decade later, that community of tinkers began to decline when some of them formed Symbolics and hired some of the AI labs. The lab put in more restrictive, modern computers (VAX, 68020) and the labs ethics now became software companies get to have power over users, only the functionality matters (ignoring the type of society that results from that), and that there is no usable software with company oversight. Feeling alarmed by the trend, Stallman set out to create a POSIX-compliant, free operating system for hackers: the GNU system. The announcement was put out on the net.unix-wizards and net.usoft newsgroups in 1983.
+
+The GNU system's goal was to create a complete GNU system (C library, bash, gcc, etc.) to replace Unix and fill in the gaps of proprietary software. The first program Stallman started on was GCC (originally borrowing Tanenbaum's compiler, then attempting to rewrite a Pastel compiler to support C, then starting a new compiler from scratch) which ended up releasing in 1987. The first released GNU program was Emacs which released in 1985 as an alternative for vi/ed and was distributed in the mail for $150 for non-internet users. With Emacs came the GNU General Public License (GPL)[^librarygpl] which embodied the free software principles above. Stallman founded the Free Software Foundation charity that same year, getting profits from sold GNU software, source codes/manuals, and later members' dues. 
+
+The GNU project was coming into fruition component by component by the 90s and was almost done by 1990 but was still waiting on the GNU kernel (GNU Hurd) due to difficulties of the microkernel architecture (debugging was particularly challenging between the individual servers sending messages to each other). A year later, Linus Torvalds released the Linux kernel which, when it became free in 1992, was combined to form GNU/Linux.
+
+Challenges that arose included secret hardware that needed to be reverse engineered, non-free libraries (such as KDE) that required free replacements (GNOME), software patents which restricted some features like LZW compressions or MP3 playback, developing good documentation, and emphasizing the philosophy of freedom rather than the business utility.
+
+Institutional Use of Free Software:
+
+Proprietary software allows spying (telemetry), restrictions, censoring, and backdooring [^sass]. The state should also avoid these harms as its goal is to ensure freedom and the wellbeing of people; it should distribute free software (including their websites/file servers), not require nonfree programs, and ban computers within that require proprietary software. The government should also incentivize free software by pushing manufacturers to not require proprietary software, providing tax breaks for free software developers, and preventing tax writeoffs for manufacturers who donate their software to schools. In a similar way, schools should push their values of cooperation and freedom by using free software to allow gifted students to dive deeper into the software they use.
+
+#### Part 2: What's in a Name?
+
+Saying only "Linux" and not "GNU/Linux" obscures the history of free software[^othersoftwarecategories]. Linux is associated with businesses and company-developed nonfree software whereas GNU is associated with the ideology. Once Linus developed his kernel, he used it with the GNU system so his contribution, which comprised 3% of the OS, was similar to others such as Donald Knuth who created TeX. The integration of the kernel was substantial work and the FSF has to maintain a free version of Linux as well since Linux contains some proprietary binary blobs.
+
+Open source associates itself with practicality rather than morality, or a development methodology vs. a social movement - the naming is also flawed in that it sounds like looking at source code. While not the enemy, they should be highlighted separately as the priorities are different. Open source advocates are more likely to be ok with proprietary software that can have negative consequences for the user (such as DRM). Finally, insulting names for proprietary software can be used to bring in humor and clarify what side you're on. 
+
+#### Part 3: Copyright and Injustice
+
+In the constitution, copyright has minimal focus, not seen as a required right but more so a necessary temporary incentive. There is often the argument of “striking a balance between publishers and consumers” which is the wrong interpretation since the benefit lies with consumers using copyrighted works and any benefit that publishers have should be in pushing that interest (incentivizing publishers to create more work by giving away some of the freedom of the readers).
+
+Stallman argues for 10 years of copyright (which is how long a work lasts), though he notes that different types of work should have different lengths of time for protection (ex. points out that scientific articles shouldn't be paywalled). He also notes that while copyright was more suited during the age of the printing press (mainly preventing unauthorized book copying from other publishers), they are now used against individual users and their usage is tightly controlled.  
+
+#### Part 4: Software Patents: Dangers to Programmers
+
+*The rest of the sections were skimmed through so I have fewer notes on them.*
+
+Patents is a monopoly on an idea that lasts around 20 years and software patents (which cover program algorithms, file formats) shouldn't exist, conflicting with the ideas of copyright by locking in functional ideas. According to a 2004 study \- Linux itself possibly violates 283 patents
+
+#### Part 5: Free Software Licensing
+
+
+
 ### The Cathedral and the Bazaar ([Raymond](https://en.wikipedia.org/wiki/Eric_S._Raymond), 2001)
 
 ### Bonus!: Linus' Master of Science Thesis - [Linux: A Portable Operating System](https://www.cs.helsinki.fi/petri/index_files/linus.pdf) (1997)
@@ -242,9 +301,9 @@ This is constrained by adhering to the POSIX interface [^personalities].
 
 While a C compiler does provide cross platform compilation, there are still a host of issues. First are data issues: consistent data sizes are important for networking and file systems so a types header file is required for some platforms. Byte alignment (or an object being stored at an address that's a multiple of 8/4/etc.) is assumed with a trap handler to catch exceptions. Byte order uses functions to convert between big-endian and little-endian.
 
-Memory management must be fast and simple, even without hardware standards. Modern CPUs have a feature known as a Translation Lookaside Buffer (TLB) which shows recent translations of virtual memory to physical memory but the method of handling virtual memory translation varies across the system architecture [^morememorymanagement]. To solve this incongruiety, the Linux kernel uses the kernel vm to split memory management into (at least) two page tables, with one dedicated to the kernel VM and the other to the architecture-specific CPU. The TLB and the page tables must be kept in sync.
+Memory management must be fast and simple, even without hardware standards. Modern CPUs have a feature known as a Translation Lookaside Buffer (TLB) which shows recent translations of virtual memory to physical memory but the method of handling virtual memory translation varies across the system architecture [^morememorymanagement]. To solve this incongruity, the Linux kernel uses the kernel vm to split memory management into (at least) two page tables, with one dedicated to the kernel VM and the other to the architecture-specific CPU. The TLB and the page tables must be kept in sync.
 
-Cache coherency (syncing multiple processor caches) is also required [^instructionvsdatacache]. For multiprocessor handling, atomicity is provided for kernel data structures via kernel locks. Finally, device drivers (which comprimise half of the kernel) provide I/O abstraction though the PCI standard is helping cut down on the work.
+Cache coherency (syncing multiple processor caches) is also required [^instructionvsdatacache]. For multiprocessor handling, atomicity is provided for kernel data structures via kernel locks. Finally, device drivers (which comprise half of the kernel) provide I/O abstraction though the PCI standard is helping cut down on the work.
 
 ## Interviews with Linus Torvalds
 
@@ -313,3 +372,13 @@ Cache coherency (syncing multiple processor caches) is also required [^instructi
 [^linusintel]: He wanted to intern at Intel but had visa issues so he continued to stay in Helsinki.
 
 [^finlandball]: Linus was later invited to Finland's "President's Ball" (or Independence Day Reception).
+
+[^deltaappstore]: This is interesting since that means free software (not sure about GPLv3 yet) does allow preventing distribution on certain platforms, so what's done here, preventing using the Delta code on the app store, is (probably) kosher: https://github.com/rileytestut/Delta/blob/main/README.md
+
+[^librarygpl]: GNU Library GPL (used with GNU C Library) was a special copyleft exception that allows linking of proprietary software. Since the C library was generic in preventing usage with non-free systems, that would discourage the use of that library so it's a necessary comprimise to ensure that GCC is used further.
+
+[^sass]: Software as a service enables all of these harms and also risks locking yourself into a network.
+
+[^sourcepricelimit]: There is one exception: the GPL license requires source code provided so if only a binary is provided, there’s a price limit for the source.
+
+[^othersoftwarecategories]: There is also noncopylefted free software, also known as public domain software. In terms of nonfree software, this can include software that prevents redistribution and freeware/shareware.
