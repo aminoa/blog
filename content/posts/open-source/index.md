@@ -63,7 +63,7 @@ Last summer, before writing Feature, I wanted to improve my knowledge of the his
     - [Linux Foundation Interview with Dirk Hohndel (2024)](#linux-foundation-interview-with-dirk-hohndel-2024)
     - [New Yorker Article (2018)](#new-yorker-article-2018)
   - [Thoughts](#thoughts)
-  - [Other Sources:](#other-sources)
+  - [Other Sources](#other-sources)
 
 ## Timeline
 
@@ -460,11 +460,11 @@ As these notes are on YouTube videos or articles, they are going to be a bit mor
 - RMS' controverisal comments hurt his standing in the FOSS community (especially on the Jeffrey Epstein scandal about the actions of MIT professor Marvin Minsky though he partially apologized in 2021 when coming back to the FSF board); while some of RMS' statements were mischaracterized, he made some [damning](https://drewdevault.com/2023/11/25/2023-11-26-RMS-on-sex.html) statements.
 - Linus used Bitkeeper; he says that open source is the only right way to do software but to use the best tool for the job.
 
-## Other Sources:
+## Other Sources
 
 - [The story behind Open Source Software, Saumo Pal](https://www.btw.so/blog/history-of-open-source-software/)
 - [StackOverflow - What are operating-system personalities?](https://stackoverflow.com/questions/52136857/what-are-operating-system-personalities)
--  [Wikipedia - Avie Tevanian](https://en.wikipedia.org/wiki/Avie_Tevanian)
+- [Wikipedia - Avie Tevanian](https://en.wikipedia.org/wiki/Avie_Tevanian)
 
 [^manpages]: The first man pages were created in 1971. 
 
