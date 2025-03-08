@@ -43,7 +43,7 @@ Last summer, before writing Feature, I wanted to improve my knowledge of the his
       - [Part 6: Traps and Challenges](#part-6-traps-and-challenges)
       - [Part 7: Value Community and Your Freedom](#part-7-value-community-and-your-freedom)
     - [The Cathedral and the Bazaar (Raymond, 2001)](#the-cathedral-and-the-bazaar-raymond-2001)
-      - [Forward](#forward-4)
+      - [*Forward*](#forward-4)
       - [A Brief History of Hackerdom](#a-brief-history-of-hackerdom)
       - [The Cathedral and the Bazaar](#the-cathedral-and-the-bazaar)
       - [Homesteading the Noosphere](#homesteading-the-noosphere)
@@ -54,8 +54,15 @@ Last summer, before writing Feature, I wanted to improve my knowledge of the his
       - [2. Compatibility](#2-compatibility)
       - [3. Software Interface Portability](#3-software-interface-portability)
       - [4. Hardware Portability Issues](#4-hardware-portability-issues)
+  - [Articles, Talks, and Interviews with Linus Torvalds](#articles-talks-and-interviews-with-linus-torvalds)
+    - [*Forward*](#forward-6)
+    - [DebConf 14: Q\&A with Linus Torvalds (2014)](#debconf-14-qa-with-linus-torvalds-2014)
+    - [TED Talk: The mind behind Linux (2016)](#ted-talk-the-mind-behind-linux-2016)
+    - [Aalto Talk (2012)](#aalto-talk-2012)
+    - [BBC Article (2012)](#bbc-article-2012)
+    - [Linux Foundation Interview with Dirk Hohndel (2024)](#linux-foundation-interview-with-dirk-hohndel-2024)
+    - [New Yorker Article (2018)](#new-yorker-article-2018)
   - [Thoughts](#thoughts)
-  - [Philosophy of Richard Stallman](#philosophy-of-richard-stallman)
   - [Other Sources:](#other-sources)
 
 ## Timeline
@@ -108,7 +115,7 @@ The Open Source/Corporate Integration Era:
 
 ## Book Summaries
 
-***It's telling that most of these books are over 20 years old....***
+*It's telling that most of these books are over 20 years old....*
 
 ### For Fun and Profit: A History of the FOSS Revolution ([Tozzi](http://christozzi.com/), 2017)
 
@@ -294,9 +301,9 @@ While compromise is important (ex. patent sections of GPLv3 or LGPL), the values
 
 ### The Cathedral and the Bazaar ([Raymond](https://en.wikipedia.org/wiki/Eric_S._Raymond), 2001)
 
-#### Forward
+#### *Forward*
 
-
+This book was interesting in the steps outlined on how open source is a development boon compared to proprietary software and the more sociological lens it uses when analyzing open source developers. With that being said, I find that, especially from a business perspective, a lot of his view holds up less; while there are contributors who will be motivated, a lot of the work (for example on the Linux kernel) is be done by employees of large businesses rather than dozens of individually motivated people. Maybe for smaller projects his analysis holds up more but once a project grows large enough, there needs to be some sort of sponsorship/backing for development to be sustainable (in general). With that being said, the text did have a significant influence in getting Netscape to open source their browser so the impact is definitely there.
 
 #### A Brief History of Hackerdom
 
@@ -387,18 +394,71 @@ Memory management must be fast and simple, even without hardware standards. Mode
 
 Cache coherency (syncing multiple processor caches) is also required [^instructionvsdatacache]. For multiprocessor handling, atomicity is provided for kernel data structures via kernel locks. Finally, device drivers (which comprise half of the kernel) provide I/O abstraction though the PCI standard is helping cut down on the work.
 
+## Articles, Talks, and Interviews with Linus Torvalds
+
+### *Forward*
+
+As these notes are on YouTube videos or articles, they are going to be a bit more disjointed that the book summaries above; with that being said, there can be interesting information about Linus's thoughts on the development of the Linux kernel, talking about open source, the way he talks/treats others, etc. I cut a lot of notes because they either repeat information or aren't that interesting.
+
+### DebConf 14: [Q\&A with Linus Torvalds](https://www.youtube.com/watch?v=7SofmXIYvGM) (2014)	
+
+- Distribution? He wants an easy distribution since he's not good at managing systems.
+- "Year of the Linux Desktop": Chromebooks help, the main issue being application packaging which is difficult to solve since they require many packages and can't rely on the system. Valve will help standardize this.
+- Kernel's hard rule: DON'T BREAK USERSPACE. 
+- Inflammatory language: he doesn't care. He cares about the technology and dislikes political correctness (saying that the culture he grew up in was more abrasive *probably referring to his family* and that he has thick skin). With open source, you can more easily find the people you like but you need to earn respect.
+- GPL: v3 undermined it, v2 was more straightforward in giving source and getting changes back whereas v3 further restricts on it can be used on your device. Linus purposefully kept the license to be v2 and disliked how sneaky the FSF was for GPLv3. Specifically, he was told that the tivoization clause could be invalidated which was dishonest so he doesn't want to have anything to do with the FSF (with some people there too extreme/crazy). Linus doesn't care about Tivoization since he argues that that is the right of the manufacturer even if he doesn't like it. 
+
+### [TED Talk: The mind behind Linux](https://www.youtube.com/watch?v=o8NPllzkFhE) (2016)
+
+- Linus' home office is comprimsed of plain light green walls that limits stimulation, a silent computer, and a cat. He is alone and enjoys programming (he doesn't like people but he likes his computer).
+- A friend at Helsinki introduced Linus to open source licenses (*he mentioned in different contexts that it was a talk by Stallamn that taught him about licenses*). While he worried initially about his work being take aadvantage, the revelation was getting feedback from others.
+- Git: there was about 1000 people involved in every release every 2 months. The goal was to replace CVS to improve its scalability. 
+- His main qualities are his stuborness and persistence.
+- He doesn't relate to other's feelings which is something he feels bad about but points to the fact that open source lets you pick who you want to work with, though he does acknowlege that you need warm people to welcome you into the project and also have a good user interface, but he's more concerned on the engineering side.
+- Linus doesn't see himself as a visionary but a strong engineer: again, it's perspiration (Edison) rather than being a visionary (Tesla).
+
+### [Aalto Talk](httpdds://youtu.be/MShbP3OpASA) (2012)
+
+- Commercial: Linus likes easy availability of Linux from commercial interests even after he was initially nervous (but they help with QA/UI work). He enjoys staying on the engineering side even he doesn't do much programming anymore, but mostly communication.
+- For the desktop: most consumers don’t want to install an OS so you need preinstalls  
+- Kernel dev community runs very deep; if he dies, things will continue.
+- Academia: Linus loves abstract CS at University of Helsinki, but didn’t continue with academia because he hates papers. If you can’t see beginning to end, then it isn’t fun On the contrary, he loves startups (Transmeta) with early technical development but loses interest when the focuses shifts to the IPO. For startups generally, he believes in adding a special edge on a boring open source base.
+- Nvidia, fuck you  
+- Believes in specialization (not every child should do programming), but everyone should get the possibility to tinker with computers  
+- Execution is more important than vision: genius is 99% perspiration and 1% inspiration; sign of passion is someone who can solve all the problems with ideas but he believes in hard work and passion
+- He doesn’t game but wants gaming platforms to be more open though he understands razer blade approach of consoles. There are not a lot of good open source games, so there would need to be a different mindset for that.
+
+### [BBC Article](https://www.bbc.com/news/technology-18419231) (2012)
+
+- Open source is based on selfish motives, even if not necessarily for financial reward (pleasure of tinkering and wants to get more people into that).
+- As kernel has gotten more complex, it has become more difficult to get into development, but there’s no shortage of developers. 
+- Linus is glad that Microsoft doesn’t see Linux as the enemy.
+
+### [Linux Foundation Interview](https://www.youtube.com/watch?v=cPvRIWXNgaM) with Dirk Hohndel (2024)
+
+- RISC-V: even when doing open hardware, hardware people are different than software people as there is a big gulf between verilog/kernel and software devevelopers. Furtheremore, it's making the same mistakes that ARM/x86 did.
+- XZ situation: Open source relies on trust which can be violated so it's an open problem on figuring out when its violated. 
+- AI/LLMs: he doesn’t want to part of the hype, but finds it interesting and is optimistic about AI to find bugs as a tool since kernel tools can be hard to use  
+
+### [New Yorker Article](https://www.newyorker.com/science/elements/after-years-of-abusive-e-mails-the-creator-of-linux-steps-aside) (2018)
+
+- Linus is known as “Benevolent dictator for life” for Linux and reviews every line of code merged
+- He temporarily stepped away and apologized after getting questions about his conduct from the New Yorker
+- In 2013, he was very against buying into what he saw as "the fake politeness, the lying, the office politics and backstabbing, the passive aggressiveness, and the buzzwords. Because THAT is what ‘acting professionally’ results in: people resort to all kinds of really nasty things because they are forced to act out their normal urges in unnatural ways."
+- Sharp, a former kernel developer, said that he doesn't discriminate with this language and despite her suggestion against negative feedback without abusive language, Torvalds thinks the stakes are higher than being polite.
+- Aurora, another former kernel developer, noted that the aggressive communication created a leadership model of being an asshole (leading to a sexist environment).
+- Torvalds had an unenforced general Code of Conflict in 2015 though later in 2018 a new Code of Conflict was created.
+
 ## Thoughts
 
 - Stallman highlights tax breaks/financial incentives for developers creating FOSS, which sounds interesting
 - Key difference: "A development methodology vs. a social movement" - the open source initiative really does cover the ideas Stallman advocated for, but there is definitely a de-emphasis on the moral ideas
 - His philosophy seems archaic and non feasible even a decade ago - almost all modern software will connect to a cloud service and the rise of AI tooling has only accelerated that change.
 - Speaking of AI, the [Open Source AI Definition from the OSI](https://opensource.org/ai/open-source-ai-definition) focuses on open source machine learning systems, highlighting data access (where to obtain the data, how its labeled, processed), the code for training/running the system, and the weight parameters for models. 
-
-## Philosophy of Richard Stallman
-
-- Enveloped in controversies later stalled him  
-- GNU/Linux debate \- his values are right but there's an advocacy limit before people want to tune you out and RMS has not found his limit  
-- Epstein Controversy: Got back on the open source board in 2021, but furthered decline of his influence.
+- The Free Software Foundation's (and Stallman's) message feels outdated and not providing a realistic go-to action for its supporters to take. I get that the organizations influence was naturally going to decline as the open source movement grew and splintered on their own. With that being said, the FSF is unique in its specific advocacy and there needs to be a change in the organization for it to make its message more actionable and modern. The EFF is a good modern example of what a digital advocacy group should be, especially with very direct call to actions.
+- Torvalds didn't come across as the 'open source' leader - this tracks with what Raymond stated that most of these FOSS leaders would rather be humble - he is laid-back on many FOSS issues and doesn't go too deep into advocacy on open source. He's probably content with his role on being the leader of the kernel - it's a bit disappointing. 
+- This was cut out of my notes above but RMS' controverisal comments hurt his standing in the controvery in the FOSS community (especially on the Jeffrey Epstein scandal about the actions of the MIT professor Marvin Minsky); while some of RMS' statements were mischaracterized, he made some [damning](https://drewdevault.com/2023/11/25/2023-11-26-RMS-on-sex.html) statements (though he partially apologized for his Epstein statement in 2021 when he came back to the FSF board).
+- Linus used Bitkeeper; he says that open source is the only right way to do software but to use the best tool for the job.
 
 ## Other Sources:
 
