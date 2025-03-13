@@ -5,65 +5,62 @@ draft: false
 summary: Reading I did on Linus Torvalds, the FOSS movement and Richard Stallman
 ---
 
-*Photo credit to [Faces of Open Source](https://www.facesofopensource.com/linus-torvalds/)*
+*Photo credit to [Faces of Open Source](https://www.facesofopensource.com/linus-torvalds/). If you take nothing else from this post, read [For Fun and Profit: A History of the FOSS Revolution (2017, Tozzi)](https://mitpress.mit.edu/9780262551786/for-fun-and-profit/) and take a look at the timeline and maybe my forwards for the books.*
 
-# Forward
-
-*If you take nothing else from this post, read [For Fun and Profit: A History of the FOSS Revolution (2017, Tozzi)](https://mitpress.mit.edu/9780262551786/for-fun-and-profit/) and take a look at the timeline and maybe my forwards for the books.*
+Edit 03-13-2025: Added footnote on Red Hat, added more contributors for Creative Commons to timeline based on Sachin's notes.
 
 Last summer, before writing Feature, I wanted to improve my knowledge of the history of open source software. While I primarily focused on Linus Torvalds, I broadened my research (reading books/articles and watching YouTube videos) to focus on the movement as a whole. This post won't be as polished as my previous one; it is more of a research document rather than a regular blog post, but it may be fun to skim through!
 
 ## Table of Contents
 
-- [Forward](#forward)
-  - [Table of Contents](#table-of-contents)
-  - [Timeline](#timeline)
-  - [Book Summaries](#book-summaries)
-    - [For Fun and Profit: A History of the FOSS Revolution (Tozzi, 2017)](#for-fun-and-profit-a-history-of-the-foss-revolution-tozzi-2017)
-      - [*Forward*](#forward-1)
-      - [Chapter 1: The Path to Revolution Unix and the Origins of Hacker Culture](#chapter-1-the-path-to-revolution-unix-and-the-origins-of-hacker-culture)
-      - [Chapter 2: Inventing the FOSS Revolution Hacker Crisis, GNU, and the Free Software Foundation](#chapter-2-inventing-the-foss-revolution-hacker-crisis-gnu-and-the-free-software-foundation)
-      - [Chapter 3: A Kernel of Hope](#chapter-3-a-kernel-of-hope)
-      - [Chapter 4: The Moderate FOSS Revolution](#chapter-4-the-moderate-foss-revolution)
-      - [Chapter 5: The FOSS Revolutionary Wars](#chapter-5-the-foss-revolutionary-wars)
-      - [Chapter 6: Ending the FOSS Revolution?](#chapter-6-ending-the-foss-revolution)
-    - [Just for Fun: The Story of an Accidental Revolutionary (Torvalds, 2002)](#just-for-fun-the-story-of-an-accidental-revolutionary-torvalds-2002)
-      - [*Forward*](#forward-2)
-      - [Birth of a Nerd](#birth-of-a-nerd)
-      - [Birth of an Operating System](#birth-of-an-operating-system)
-      - [King of the Ball](#king-of-the-ball)
-      - [End Sections](#end-sections)
-    - [Free Software, Free Society (Stallman, 2002)](#free-software-free-society-stallman-2002)
-      - [*Forward*](#forward-3)
-      - [Part 1: GNU Project/Free Software](#part-1-gnu-projectfree-software)
-      - [Part 2: What's in a Name?](#part-2-whats-in-a-name)
-      - [Part 3: Copyright and Injustice](#part-3-copyright-and-injustice)
-      - [Part 4: Software Patents: Dangers to Programmers](#part-4-software-patents-dangers-to-programmers)
-      - [Part 5: Free Software Licensing](#part-5-free-software-licensing)
-      - [Part 6: Traps and Challenges](#part-6-traps-and-challenges)
-      - [Part 7: Value Community and Your Freedom](#part-7-value-community-and-your-freedom)
-    - [The Cathedral and the Bazaar (Raymond, 2001)](#the-cathedral-and-the-bazaar-raymond-2001)
-      - [*Forward*](#forward-4)
-      - [A Brief History of Hackerdom](#a-brief-history-of-hackerdom)
-      - [The Cathedral and the Bazaar](#the-cathedral-and-the-bazaar)
-      - [Homesteading the Noosphere](#homesteading-the-noosphere)
-    - [Bonus!: Linus' Master of Science Thesis - Linux: A Portable Operating System (1997)](#bonus-linus-master-of-science-thesis---linux-a-portable-operating-system-1997)
-      - [*Forward*](#forward-5)
-      - [0. Intro](#0-intro)
-      - [1. Linux Design/Implementation](#1-linux-designimplementation)
-      - [2. Compatibility](#2-compatibility)
-      - [3. Software Interface Portability](#3-software-interface-portability)
-      - [4. Hardware Portability Issues](#4-hardware-portability-issues)
-  - [Articles, Talks, and Interviews with Linus Torvalds](#articles-talks-and-interviews-with-linus-torvalds)
-    - [*Forward*](#forward-6)
-    - [DebConf 14: Q\&A with Linus Torvalds (2014)](#debconf-14-qa-with-linus-torvalds-2014)
-    - [TED Talk: The mind behind Linux (2016)](#ted-talk-the-mind-behind-linux-2016)
-    - [Aalto Talk (2012)](#aalto-talk-2012)
-    - [BBC Article (2012)](#bbc-article-2012)
-    - [Linux Foundation Interview with Dirk Hohndel (2024)](#linux-foundation-interview-with-dirk-hohndel-2024)
-    - [New Yorker Article (2018)](#new-yorker-article-2018)
-  - [Thoughts](#thoughts)
-  - [Other Sources](#other-sources)
+- [Table of Contents](#table-of-contents)
+- [Timeline](#timeline)
+- [Book Summaries](#book-summaries)
+  - [For Fun and Profit: A History of the FOSS Revolution (Tozzi, 2017)](#for-fun-and-profit-a-history-of-the-foss-revolution-tozzi-2017)
+    - [*Forward*](#forward)
+    - [Chapter 1: The Path to Revolution Unix and the Origins of Hacker Culture](#chapter-1-the-path-to-revolution-unix-and-the-origins-of-hacker-culture)
+    - [Chapter 2: Inventing the FOSS Revolution Hacker Crisis, GNU, and the Free Software Foundation](#chapter-2-inventing-the-foss-revolution-hacker-crisis-gnu-and-the-free-software-foundation)
+    - [Chapter 3: A Kernel of Hope](#chapter-3-a-kernel-of-hope)
+    - [Chapter 4: The Moderate FOSS Revolution](#chapter-4-the-moderate-foss-revolution)
+    - [Chapter 5: The FOSS Revolutionary Wars](#chapter-5-the-foss-revolutionary-wars)
+    - [Chapter 6: Ending the FOSS Revolution?](#chapter-6-ending-the-foss-revolution)
+  - [Just for Fun: The Story of an Accidental Revolutionary (Torvalds, 2002)](#just-for-fun-the-story-of-an-accidental-revolutionary-torvalds-2002)
+    - [*Forward*](#forward-1)
+    - [Birth of a Nerd](#birth-of-a-nerd)
+    - [Birth of an Operating System](#birth-of-an-operating-system)
+    - [King of the Ball](#king-of-the-ball)
+    - [End Sections](#end-sections)
+  - [Free Software, Free Society (Stallman, 2002)](#free-software-free-society-stallman-2002)
+    - [*Forward*](#forward-2)
+    - [Part 1: GNU Project/Free Software](#part-1-gnu-projectfree-software)
+    - [Part 2: What's in a Name?](#part-2-whats-in-a-name)
+    - [Part 3: Copyright and Injustice](#part-3-copyright-and-injustice)
+    - [Part 4: Software Patents: Dangers to Programmers](#part-4-software-patents-dangers-to-programmers)
+    - [Part 5: Free Software Licensing](#part-5-free-software-licensing)
+    - [Part 6: Traps and Challenges](#part-6-traps-and-challenges)
+    - [Part 7: Value Community and Your Freedom](#part-7-value-community-and-your-freedom)
+  - [The Cathedral and the Bazaar (Raymond, 2001)](#the-cathedral-and-the-bazaar-raymond-2001)
+    - [*Forward*](#forward-3)
+    - [A Brief History of Hackerdom](#a-brief-history-of-hackerdom)
+    - [The Cathedral and the Bazaar](#the-cathedral-and-the-bazaar)
+    - [Homesteading the Noosphere](#homesteading-the-noosphere)
+  - [Bonus!: Linus' Master of Science Thesis - Linux: A Portable Operating System (1997)](#bonus-linus-master-of-science-thesis---linux-a-portable-operating-system-1997)
+    - [*Forward*](#forward-4)
+    - [0. Intro](#0-intro)
+    - [1. Linux Design/Implementation](#1-linux-designimplementation)
+    - [2. Compatibility](#2-compatibility)
+    - [3. Software Interface Portability](#3-software-interface-portability)
+    - [4. Hardware Portability Issues](#4-hardware-portability-issues)
+- [Articles, Talks, and Interviews with Linus Torvalds](#articles-talks-and-interviews-with-linus-torvalds)
+  - [*Forward*](#forward-5)
+  - [DebConf 14: Q\&A with Linus Torvalds (2014)](#debconf-14-qa-with-linus-torvalds-2014)
+  - [TED Talk: The mind behind Linux (2016)](#ted-talk-the-mind-behind-linux-2016)
+  - [Aalto Talk (2012)](#aalto-talk-2012)
+  - [BBC Article (2012)](#bbc-article-2012)
+  - [Linux Foundation Interview with Dirk Hohndel (2024)](#linux-foundation-interview-with-dirk-hohndel-2024)
+  - [New Yorker Article (2018)](#new-yorker-article-2018)
+- [Thoughts](#thoughts)
+- [Other Sources](#other-sources)
 
 ## Timeline
 
@@ -99,7 +96,7 @@ The Year of the Linux Server Era:
 - 1998: Netscape Navigator open sourced
 - 1998: Microsoft "Halloween Documents" leaked
 - 1999: Release of GNOME
-- 2001: Lawrence Lessig creates Creative Commons
+- 2001: Creative Commons created by Lawrence Lessig, Eric Eldrid, Hal Abelson, and Aaron Swartz
 
 The Open Source/Corporate Integration Era:
 
@@ -185,7 +182,7 @@ At the turn of the millennium, FOSS was dominant in the server/developer space b
 
 Android, initially created by Andy Rubin and Rich Miner as a camera software company, was acquired by Google in 2005 and set to develop a mobile OS to counter iOS; it notably used a Linux kernel and based on Google's efforts on promoting and distributing the OS was able to capture 90% of the mobile market share. However, Google didn't want to link Android to Linux or open source (the kernel was GPL licensed and the rest of the OS Apache licensed).
 
-Canonical and Ubuntu were created in 2004 by Mark Shuttleworth in order to create a free accessible distribution. While supporting GNU developers, he found them too ideological and incorporated proprietary components in Ubuntu such as binary blobs. Ubuntu would conquer the server space (being the second most popular distribution) and get to 40 million desktop users[^ubuntupopularity]. The reactions were expected: Torvalds praised it for the ease of usability whereas Stallman criticized it for collecting user data for Canonical's marketing efforts. 
+Canonical and Ubuntu were created in 2004 by Mark Shuttleworth in order to create a free accessible distribution. While supporting GNU developers, he found them too ideological and incorporated proprietary components in Ubuntu such as binary blobs[^redhatbinaryblob]. Ubuntu would conquer the server space (being the second most popular distribution) and get to 40 million desktop users[^ubuntupopularity]. The reactions were expected: Torvalds praised it for the ease of usability whereas Stallman criticized it for collecting user data for Canonical's marketing efforts. 
 
 The trend of using FOSS software while still limiting user control continued through the 2000s/2010s. Cloud computing provided FOSS software online (such as Rackspace's OpenStack in 2010 to create standards for object storage) and this trend was viewed unfavorably by Stallman as it took away control from the user while taking their data. Embedded devices (such as TVs, thermostats, etc.) also starting using FOSS software but attempted to limit the ability to modify the free software on the device (also known as Tivoization, which was the motivating reasons for GPLv3).
 
@@ -519,3 +516,5 @@ As these notes are on YouTube videos or articles, they are going to be a bit mor
 [^sourcepricelimit]: There is one exception: the GPL license requires source code provided so if only a binary is provided, there’s a price limit for the source.
 
 [^othersoftwarecategories]: There is also noncopylefted free software, also known as public domain software. In terms of nonfree software, this can include software that prevents redistribution and freeware/shareware.
+
+[^redhatbinaryblob]: Edit: Red Hat's distributions (CentOS, Fedora) also included non-free firmware - credit to Sachin.
