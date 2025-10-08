@@ -31,7 +31,7 @@
 
 [[main]]
   name = "RSS"
-  url = "../../posts/index.xml" # scuffed way of getting only all posts rss feed
+  url = "../../posts/index.xml"
   weight = 40
   [[main.params]]
     icon = "rss"
@@ -40,10 +40,10 @@
 
 [[main]]
   name = "Copyright"
-  url = "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" 
+  url = "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en"
   weight = 50
   [[main.params]]
-    icon = "cc"
+    icon = "circle-info"
     showName = false
     target = "_blank"
 
