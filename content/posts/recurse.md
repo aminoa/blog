@@ -27,7 +27,7 @@ I ended up looking at a ton of new things briefly that I also couldn't explore m
 - Writing a C Compiler
 - Vulkan Tutorial
 - Godot Game Development
-- Writing a native Java application on the 3ds[3dsjava]
+- Writing a native Java application on the 3ds[^3dsjava]
 - [Transformer Circuits](https://transformer-circuits.pub/)
 - OpenPBX
 
@@ -42,6 +42,6 @@ RC was a ton of fun, and it felt very bittersweet to finish my batch, but I hope
 [^noinfra]: a) It's too much of a time sink, especially with home kubernetes cluster, and b) I was going to start at Affirm right after so I thought it wouldn't be the best use of my time.
 [^gputricks]: quantization, fusing operators since memory access is a bottleneck, in a similar vein recomputating activations to avoid memory access, memory coalescing, many more
 [^3dsjava]: Yes, the 3DS uses an ARM-11 dual-core CPU (32-bit ARMv6 ISA) and it supports [Jazelle](https://en.wikipedia.org/wiki/Jazelle), an ARM extension, for native Java bytecode execution. There is actually a project [here](https://github.com/aspargas2/advent-of-code-2023/tree/main/day01-jazelle) which uses this mode to solve an AOC problem. I learnt about this through the [Copetti](https://www.copetti.org/writings/consoles/nintendo-3ds/) architecture article.
-[^unrelated] This is the first small post. To reduce friction, I'm planning on writing more in the future though there will occasionally be really big posts (like my last two)!
+[^unrelated]: This is the first small post. To reduce friction, I'm planning on writing more in the future though there will occasionally be really big posts (like my last two)!
 [^friends]: I also felt it was easy to make friends at the hub (I only did a half batch, so I'm sure you make a few more in a full-batch).
 [^otherevents]: Other notable one-off events included using [GNU Radio](https://www.gnuradio.org/) and ricing show-and-tell.
