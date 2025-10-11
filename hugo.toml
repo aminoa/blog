@@ -1,4 +1,4 @@
-baseURL = 'blog.aneeshmaganti.com/'
+baseURL = 'https://stalereference.com'
 languageCode = 'en'
-title = 'Melancholy Reference'
+title = 'Stale Reference'
 theme = 'congo'
