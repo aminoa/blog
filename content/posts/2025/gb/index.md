@@ -17,7 +17,7 @@ On an unrelated note, when I was first developing the dot-matrix-c++, I tried no
 
 ## Closing
 
-Despite the negative tone of this post, I did enjoy developing the emulator, and I was super excited finally getting my joypad working on it to be able to interact with these games; It's impressive how complex even this piece of 1999 hardware can be. 
+Despite the negative tone of this post, I did enjoy developing the emulator, and I was super excited finally getting my joypad working on it to be able to interact with these games; It's impressive how complex even this piece of 1989 hardware can be. 
 
 {{< video src="dot-matrix-rs-reel.mp4" width="600" >}}
 
