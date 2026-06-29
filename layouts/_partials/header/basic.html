@@ -28,7 +28,7 @@
                       </span>
                     {{- end -}}{{- if .Params.showName | default true -}}
                       <span
-                        class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                        class="nav-link"
                         >{{ .Name | markdownify | emojify }}</span
                       >
                     {{ end }}
@@ -50,7 +50,7 @@
                     {{- end -}}
                     {{- if .Params.showName | default true -}}
                       <span
-                        class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                        class="nav-link"
                         >{{ .Name | markdownify | emojify }}</span
                       >
                     {{ end }}
@@ -64,7 +64,7 @@
                     {{ end }}
                     {{ if .Params.showName | default true }}
                       <span
-                        class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                        class="nav-link"
                         >{{ .Name | markdownify | emojify }}</span
                       >
                     {{ end }}
@@ -86,7 +86,7 @@
                     </span>
                   {{- end -}}{{- if .Params.showName | default true -}}
                     <span
-                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      class="nav-link"
                       >{{ .Name | markdownify | emojify }}</span
                     >
                   {{ end }}</a

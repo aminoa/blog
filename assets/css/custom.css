@@ -6,6 +6,20 @@ body > header {
     border-bottom-color: #404040;
 }
 
+/* Fade-in underline for nav links */
+.nav-link {
+    text-decoration: none;
+    background-image: linear-gradient(rgb(var(--color-primary-500)), rgb(var(--color-primary-500)));
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 1px;
+    transition: background-size 0.25s ease;
+}
+
+.nav-link:hover, .group:hover .nav-link {
+    background-size: 100% 1px;
+}
+
 /* Fade-in underline for article title links */
 .article-title-link {
     text-decoration: none;
