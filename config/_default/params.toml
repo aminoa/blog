@@ -11,7 +11,7 @@ autoSwitchAppearance = false
 
 defaultThemeColor = "#FFFFFF"
 
-enableSearch = false
+enableSearch = true
 enableCodeCopy = false
 enableImageLazyLoading = true
 enableImageWebp = false
@@ -34,7 +34,7 @@ fingerprintAlgorithm = "sha256"
 [homepage]
   layout = "page" # valid options: page, profile, custom
   showRecent = true
-  recentLimit = 5
+  recentLimit = 20
 
 [article]
   showDate = true
@@ -55,7 +55,7 @@ fingerprintAlgorithm = "sha256"
 
 [list]
   showBreadcrumbs = false
-  showSummary = true
+  showSummary = false
   showTableOfContents = false
   showTaxonomies = false
   groupByYear = true

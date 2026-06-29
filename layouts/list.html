@@ -1,10 +1,10 @@
 {{ define "main" }}
   {{ $toc := and (.Params.showTableOfContents | default (.Site.Params.list.showTableOfContents | default false)) (in .TableOfContents "<ul") }}
-  <header>
+  <header class="pt-8">
     {{ if .Params.showBreadcrumbs | default (.Site.Params.list.showBreadcrumbs | default false) }}
       {{ partial "breadcrumbs.html" . }}
     {{ end }}
-    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">{{ .Title }}</h1>
+    <h1 class="mt-0 text-2xl font-bold text-neutral-700 dark:text-neutral-300">{{ .Title }}</h1>
   </header>
   <section
     class="{{ if $toc -}}
