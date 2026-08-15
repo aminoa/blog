@@ -1,8 +1,10 @@
 +++
-title = 'Reflections on writing a Game Boy emulator'
+title = 'Intermediate reflections on writing a Game Boy emulator'
 date = 2025-10-19T20:37:21-04:00
 draft = false
 +++
+
+Edit: I wrote a more comprehensive follow-up post [here](/posts/2026/writing-dot-matrix/).
 
 ## Thoughts
 
