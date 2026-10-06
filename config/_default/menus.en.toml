@@ -36,10 +36,11 @@
 
 [[main]]
   name = "RSS"
-  url = "../../posts/index.xml"
+  url = "/posts/index.xml"
   weight = 40
   [[main.params]]
     icon = "rss"
+    action = "rss"
     showName = false
     target = "_blank"
 
