@@ -1,6 +1,6 @@
 +++
 title = 'Educated (Westover, 2018)'
-date = 2025-01-01T00:00:00-04:00
+date = 2025-11-04T00:00:00-05:00
 draft = false
 +++
 

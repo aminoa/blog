@@ -1,6 +1,6 @@
 +++
 title = 'Hollow Knight: Silksong (Team Cherry, 2025)'
-date = 2025-06-01T00:00:00-04:00
+date = 2025-09-30T00:00:00-04:00
 draft = false
 +++
 
