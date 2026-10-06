@@ -1,9 +1,14 @@
+/* Softer off-white base for light mode (dark mode keeps white text) */
+html:not(.dark) {
+    --color-neutral: 241, 241, 236;
+}
+
 /* Dividing line below site header */
 body > header {
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #dcdcd6;
 }
 .dark body > header {
-    border-bottom-color: #404040;
+    border-bottom-color: #333336;
 }
 
 /* Fade-in underline for nav links */

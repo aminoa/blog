@@ -1,4 +1,12 @@
-{{ if .Site.Params.homepage.showRecent | default false }} {{ range first
-.Site.Params.homepage.recentLimit (.Paginate (where .Site.RegularPages "Type"
-"in" .Site.Params.mainSections) .Site.Params.homepage.recentLimit).Pages }} {{
-partial "article-link.html" . }} {{ end }} {{ end }}
+{{ if .Site.Params.homepage.showRecent | default false }}
+  {{ $pages := first .Site.Params.homepage.recentLimit (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+  {{ range $pages.GroupByDate "2006" }}
+    <h2 class="mt-12 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">
+      {{ .Key }}
+    </h2>
+    <hr class="w-36 border-dotted border-neutral-400" />
+    {{ range .Pages }}
+      {{ partial "article-link.html" . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
