@@ -1,0 +1,56 @@
+{{ $nl := site.Params.newsletter }}
+{{ if and $nl.mailerliteAccountId $nl.mailerliteFormId }}
+  <aside class="newsletter print:hidden">
+    <p class="newsletter-heading">Subscribe</p>
+    {{ with $nl.blurb }}<p class="newsletter-blurb">{{ . }}</p>{{ end }}
+    <form
+      class="newsletter-form"
+      action="https://assets.mailerlite.com/jsonp/{{ $nl.mailerliteAccountId }}/forms/{{ $nl.mailerliteFormId }}/subscribe"
+      method="post"
+      target="_blank"
+      data-newsletter
+    >
+      <label for="newsletter-email" class="newsletter-label">Email address</label>
+      <input
+        type="email"
+        name="fields[email]"
+        id="newsletter-email"
+        placeholder="you@example.com"
+        autocomplete="email"
+        required
+      />
+      <input type="hidden" name="ml-submit" value="1" />
+      <input type="hidden" name="anticsrf" value="true" />
+      <button type="submit">Subscribe</button>
+    </form>
+    <p class="newsletter-status" role="status" hidden></p>
+  </aside>
+  <script>
+    (() => {
+      const form = document.currentScript.previousElementSibling.querySelector("[data-newsletter]");
+      const status = form.nextElementSibling;
+      const button = form.querySelector("button");
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        button.disabled = true;
+        try {
+          const res = await fetch(form.action, { method: "POST", body: new FormData(form) });
+          const data = await res.json();
+          if (data.success) {
+            form.hidden = true;
+            status.textContent = "Thanks for subscribing!";
+          } else {
+            status.textContent = "Something went wrong. Please check your email address and try again.";
+          }
+        } catch {
+          // Fall back to a plain form post in a new tab
+          form.submit();
+          status.textContent = "Finishing your signup in a new tab.";
+        } finally {
+          status.hidden = false;
+          button.disabled = false;
+        }
+      });
+    })();
+  </script>
+{{ end }}

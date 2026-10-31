@@ -70,3 +70,8 @@ fingerprintAlgorithm = "sha256"
 #[umamiAnalytics]
 #  site = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 #  region = "eu"  # can be either "eu" or "us"
+
+[newsletter]
+  mailerliteAccountId = "2757207"
+  mailerliteFormId = "202816950716335606"
+  blurb = ""

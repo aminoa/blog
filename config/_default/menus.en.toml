@@ -39,6 +39,11 @@
     target = "_blank"
 
 [[main]]
+  name = "Subscribe"
+  pageRef = "subscribe"
+  weight = 25
+
+[[main]]
   name = "Copyright"
   url = "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en"
   weight = 50
