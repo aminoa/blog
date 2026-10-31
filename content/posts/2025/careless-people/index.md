@@ -1,7 +1,8 @@
 +++
-title = 'Careless People (Wynn-Williams, 2025)'
+title = 'Booklog: Careless People (Wynn-Williams, 2025)'
 date = 2025-09-15T00:00:00-04:00
 draft = false
+aliases = ['/notes/2025/careless-people/']
 +++
 
 Sarah Wynn Williams was born in New Zealand and suffered a shark attack early in her life. She was interested in having a global impact, starting in the UN before realizing Facebook was the future after seeing how it was used in a massive earthquake in NZ where social media kept her connected to her sister. She traveled to DC to talk to Marne and eventually became a part of the team to handle global affairs. Her unbridled optimism increases as she gets the team more interested in foreign affairs, only to decay when they care less about the consequences than before she started.

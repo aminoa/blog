@@ -16,11 +16,6 @@
   weight = 10
 
 [[main]]
-  name = "Notes"
-  pageRef = "notes"
-  weight = 15
-
-[[main]]
   name = "About"
   url = "https://aneeshmaganti.com"
   weight = 20
@@ -40,7 +35,6 @@
   weight = 40
   [[main.params]]
     icon = "rss"
-    action = "rss"
     showName = false
     target = "_blank"
 

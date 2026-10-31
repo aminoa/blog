@@ -74,16 +74,8 @@
                 {{ $.Scratch.Add "localeCount" 1 }}
                 {{ partial "translations.html" . }}
               {{ else }}
-                {{ $href := .URL }}
-                {{ if eq .Params.action "rss" }}
-                  {{/* Link to the current section's feed, falling back to posts */}}
-                  {{ $section := cond (eq page.Section "notes") "notes" "posts" }}
-                  {{ with site.GetPage $section }}
-                    {{ with .OutputFormats.Get "rss" }}{{ $href = .RelPermalink }}{{ end }}
-                  {{ end }}
-                {{ end }}
                 <a
-                  href="{{ $href }}"
+                  href="{{ .URL }}"
                   title="{{ .Title }}"
                   {{ with .Params.target }}target="{{ . }}"{{ end }}
                   >{{ with .Params.icon }}

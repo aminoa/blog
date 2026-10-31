@@ -1,7 +1,8 @@
 +++
-title = 'Hollow Knight: Silksong (Team Cherry, 2025)'
+title = 'Gamelog: Hollow Knight: Silksong (Team Cherry, 2025)'
 date = 2025-09-30T00:00:00-04:00
 draft = false
+aliases = ['/notes/2025/silksong/']
 +++
 
 ## Immediate Thoughts

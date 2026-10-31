@@ -1,7 +1,8 @@
 +++
-title = 'Play Nice (Schreier, 2024)'
+title = 'Booklog: Play Nice (Schreier, 2024)'
 date = 2025-08-30T00:00:00-04:00
 draft = false
+aliases = ['/notes/2025/play-nice/']
 +++
 
 I started this book late November last year and I finished it on April 7th, so it took me about 5 months to finish (wow). I'll have text blurbs for interesting ideas from the book rather than serving as a chronological summary. Also, this will be one of the longer summaries; most of my summaries in the future will likely only be a couple paragraphs or so.
